@@ -14,14 +14,15 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import {useNavigate} from "react-router-dom";
+import {COLORS as Color} from "../Constant/Color";
 
 const navItems = [
     {name: 'Home', nav: '/'},
     {name: 'About', nav: '/about'},
     {name: 'Sectors', nav: '/sectors'},
     {name: 'Investor Relations', nav: '/investorRelations'},
-    // {name: 'Careers', nav: '/careers'},
-    // {name: 'News Rooms', nav: '/news'},
+    {name: 'Careers', nav: '/careers'},
+    {name: 'News Rooms', nav: '/news'},
     {name: 'Contacts', nav: '/contact'},]
 
 const Header = () => {
@@ -33,14 +34,14 @@ const Header = () => {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
 
-            <Typography style={{backgroundColor: '#10728D'}} variant="h6" sx={{my: 2}}>
+            <Typography style={{backgroundColor: Color.theme}} variant="h6" sx={{my: 2}}>
                 <img src={LOGO} style={{width: '80px'}} alt={'logo'}/>
             </Typography>
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item.name}>
                         <ListItemButton sx={{textAlign: 'center'}}>
-                            <ListItemText style={{color: '#FAAC16'}} primary={item.name} onClick={() => {
+                            <ListItemText style={{color: Color.regular}} primary={item.name} onClick={() => {
                                 navigate(item.nav)
                             }}/>
                         </ListItemButton>
@@ -51,9 +52,9 @@ const Header = () => {
     );
 
     return (
-        <Box sx={{display: "flex", backgroundColor: '#10728D'}}>
-            <AppBar component="nav" style={{backgroundColor: '#10728D', boxShadow: '0px 0px 50px #000000'}}>
-                <Toolbar style={{display: "flex", justifyContent: "space-between", backgroundColor: '#10728D'}}>
+        <Box sx={{display: "flex", backgroundColor: Color.theme}}>
+            <AppBar component="nav" style={{backgroundColor: Color.theme, boxShadow: '0px 0px 50px #000000'}}>
+                <Toolbar style={{display: "flex", justifyContent: "space-between", backgroundColor: Color.theme}}>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -61,22 +62,23 @@ const Header = () => {
                         onClick={handleDrawerToggle}
                         sx={{mr: 2, display: {sm: 'none'}}}
                     >
-                        <MenuIcon style={{color: '#8DDACC'}}/>
+                        <MenuIcon style={{color: Color.regular}}/>
                     </IconButton>
                     <img src={LOGO} style={{width: '80px'}} alt={'logo'}/>
                     <Box sx={{display: {xs: 'none', sm: 'block'}}}>
                         {navItems.map((item) => (
-                            <Button style={{color: '#8DDACC'}} key={item.name} onClick={() => {
-                                navigate(item.nav)
-                            }} children={item.name}/>
+                            <Button style={{color: Color.regular, fontWeight: 'bolder'}} key={item.name}
+                                    onClick={() => {
+                                        navigate(item.nav)
+                                    }} children={item.name}/>
                         ))}
                     </Box>
                     {/*<Button>
-                        <SearchIcon sx={{color: "#8DDACC"}}/>
+                        <SearchIcon sx={{color: Color.regular}}/>
                     </Button>*/}
                 </Toolbar>
             </AppBar>
-            <Box component="nav" style={{backgroundColor: '#10728D'}}>
+            <Box component="nav" style={{backgroundColor: Color.theme}}>
                 <Drawer
                     variant="temporary"
                     open={mobileOpen}
@@ -86,7 +88,7 @@ const Header = () => {
                     }}
                     sx={{
                         display: {xs: 'block', sm: 'none'},
-                        '& .MuiDrawer-paper': {boxSizing: 'border-box', width: 240, backgroundColor: '#10728D'},
+                        '& .MuiDrawer-paper': {boxSizing: 'border-box', width: 240, backgroundColor: Color.theme},
                     }}
                 >
                     {drawer}

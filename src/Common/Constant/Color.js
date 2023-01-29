@@ -1,4 +1,5 @@
 export const COLORS = {
+    dark: '#2B557B',
     theme: '#10728D',
     regular: '#8DDACC',
     light: '#C6ECE5',
