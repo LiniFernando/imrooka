@@ -3,6 +3,7 @@ import homeImage from "../img/contact/slide.png";
 import polygons from "../img/contact/polygons.png";
 import {Button, Grid} from "@mui/material";
 import OutlinedInput from '@mui/material/OutlinedInput';
+import {COLORS as Color} from "../Common/Constant/Color";
 
 const Contacts = () => {
     return (
@@ -24,23 +25,23 @@ const Contacts = () => {
                       justifyContent="center"
                       alignItems="center"
                       spacing={3} xs={10} sm={5}>
-                    <h1 style={{color: '#10728D'}}>INQUIRE NOW</h1>
+                    <h2 style={{color: Color.theme}}>INQUIRE NOW</h2>
                     <OutlinedInput style={{
-                        backgroundColor: "#C6ECE5",
+                        backgroundColor: Color.light,
                         width: '100%',
                         borderRadius: 10,
                         margin: '5px 0'
                     }}
                                    placeholder="First Name"/>
                     <OutlinedInput style={{
-                        backgroundColor: "#C6ECE5",
+                        backgroundColor: Color.light,
                         width: '100%',
                         borderRadius: 10,
                         margin: '5px 0'
                     }}
                                    placeholder="Surname"/>
                     <OutlinedInput style={{
-                        backgroundColor: "#C6ECE5",
+                        backgroundColor: Color.light,
                         width: '100%',
                         borderRadius: 10,
                         margin: '5px 0'
@@ -48,14 +49,14 @@ const Contacts = () => {
                                    placeholder="Organization"/>
                     <div style={{width: '100%'}}>
                         <OutlinedInput style={{
-                            backgroundColor: "#C6ECE5",
+                            backgroundColor: Color.light,
                             width: '49%',
                             borderRadius: 10,
                             margin: '5px 5px 5px 0'
                         }}
                                        placeholder="Email"/>
                         <OutlinedInput style={{
-                            backgroundColor: "#C6ECE5",
+                            backgroundColor: Color.light,
                             width: '49%',
                             borderRadius: 10,
                             margin: '5px 0 5px 5px'
@@ -63,27 +64,24 @@ const Contacts = () => {
                                        placeholder="Telephone"/>
                     </div>
                     <OutlinedInput style={{
-                        backgroundColor: "#C6ECE5",
+                        backgroundColor: Color.light,
                         width: '100%',
                         borderRadius: 10,
                         margin: '5px 0'
                     }}
                                    placeholder="Subject"/>
                     <OutlinedInput style={{
-                        backgroundColor: "#C6ECE5",
+                        backgroundColor: Color.light,
                         width: '100%',
                         borderRadius: 10,
                         margin: '5px 0'
                     }} multiline
                                    rows={4}
                                    placeholder="Message"/>
-                    <Button variant="contained"
-                            style={{
-                                margin: '5px 0 20px 0',
-                                backgroundColor: '#10728D',
-                                borderRadius: 10,
-                            }}>Send
-                        Now</Button>
+                    <Button variant="contained" style={ButtonStyle} onClick={() => {
+                        // navigate('/about')
+                    }}
+                    >Send Now</Button>
                 </Grid>
 
                 <Grid item justifyContent="center"
@@ -99,5 +97,14 @@ const Contacts = () => {
         </div>
     )
 }
+const ButtonStyle = {
+    backgroundColor: Color.theme,
+    margin: '5px 0 20px 0',
+    color: Color.white,
+    fontFamily: 'Baskervville',
+    fontSize: 15,
+    padding: 15,
+    borderRadius: 100
+};
 
 export default Contacts;
