@@ -14,7 +14,7 @@ import environment from "../img/home/environment&Farming.jpg";
 import ngo from "../img/home/ngo.jpg";
 import education from "../img/home/education.jpg";
 
-import {Button, Grid, Container, Typography} from "@mui/material";
+import {Button, Grid, Container, Typography, Card, CardActionArea, CardMedia, CardContent} from "@mui/material";
 import {styled} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
@@ -85,6 +85,26 @@ const Home = () => {
         {
             url: education,
             title: 'Education',
+            width: '30%',
+        },
+    ];
+    const news = [
+        {
+            url: Tech,
+            title: 'Technology & Research',
+            discription: ' Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+            width: '40%',
+        },
+        {
+            url: apparel,
+            title: 'Apparel',
+            discription: ' Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+            width: '30%',
+        },
+        {
+            url: clinic,
+            title: 'Clinic & Saloon',
+            discription: ' Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
             width: '30%',
         },
     ];
@@ -201,7 +221,7 @@ const Home = () => {
                     spacing={5}
                 >
                     <Grid item>
-                        <h3r style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3r>
+                        <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
                         <h2 style={{color: Color.theme}}>BUSINESS SECTORS</h2>
                     </Grid>
                     <Grid style={{alignItem: 'center'}} container spacing={1}>
@@ -289,6 +309,64 @@ const Home = () => {
                 </Grid>
             </Grid>
             {/*End Brands*/}
+
+            {/*start news*/}
+            <Grid style={{backgroundColor: Color.light, paddingBottom: '20px', marginTop: '50px',}}>
+                <Grid
+                    container
+                    direction="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    spacing={5}
+                >
+                    <Grid item>
+                        <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
+                        <h2 style={{color: Color.theme}}>LATEST NEWS</h2>
+                    </Grid>
+                    <Grid style={{alignItem: 'center'}} container spacing={1}>
+                        <Grid
+                            container
+                            direction="row"
+                            justifyContent="center"
+                            alignItems="center"
+                            spacing={3}
+                            style={{paddingLeft: '10%', paddingRight: '10%', paddingBottom: 50}}
+                        >
+                            {news.map((newsDetail) => (
+                                <Grid item xs={12} sm={4} style={{marginBottom: 20}}>
+                                    <Card>
+                                        <CardActionArea>
+                                            <CardMedia
+                                                component="img"
+                                                height="140"
+                                                image={newsDetail.url}
+                                                alt="green iguana"
+                                            />
+                                            <CardContent>
+                                                <h2 style={{
+                                                    color: Color.theme,
+                                                    margin: 0,
+                                                    fontFamily: 'Baskervville'
+                                                }}>
+                                                    {newsDetail.title}
+                                                </h2>
+                                                <h2 style={{fontFamily: 'Baskervville'}}>
+                                                    {newsDetail.discription}
+                                                </h2>
+                                            </CardContent>
+                                        </CardActionArea>
+                                    </Card>
+                                </Grid>
+                            ))}
+                            <Button variant="contained" style={ButtonStyle} onClick={() => {
+                                navigate('/news')
+                            }}
+                            >More News</Button>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+            {/*end news*/}
         </div>
     )
 }
