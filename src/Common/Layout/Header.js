@@ -21,7 +21,7 @@ const navItems = [
     {name: 'About', nav: '/about'},
     {name: 'Sectors', nav: '/sectors'},
     // {name: 'Investor Relations', nav: '/investorRelations'},
-    {name: 'Careers', nav: '/careers'},
+    {name: 'Careers', nav: '/career'},
     // {name: 'News Rooms', nav: '/news'},
     {name: 'Contacts', nav: '/contact'},]
 

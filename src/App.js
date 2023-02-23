@@ -9,6 +9,9 @@ import InvestorRelations from "./View/investorRelations";
 import Contacts from "./View/contacts";
 import News from "./View/news";
 
+import Sector from "./View/sector";
+import Career from "./View/career";
+
 function App() {
     return (
         <div className="App">
@@ -18,6 +21,8 @@ function App() {
                     <Route path={"/"} element={<Home/>}/>
                     <Route path={"/about"} element={<About/>}/>
                     <Route path={"/sectors"} element={<Sectors/>}/>
+                    <Route path={"/career"} element={<Career/>}/>
+                    <Route exact path="/sectors/:name" element={<Sector/>}/>
                     <Route path={"/investorRelations"} element={<InvestorRelations/>}/>
                     <Route path={"/news"} element={<News/>}/>
                     <Route path={"/contact"} element={<Contacts/>}/>
