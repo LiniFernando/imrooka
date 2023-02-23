@@ -313,8 +313,14 @@ const Home = () => {
             {/*End Brands*/}
 
             {/*start news*/}
-            <Grid style={{backgroundColor: Color.light, paddingBottom: '20px', marginTop: '50px',}}>
-                <Grid
+            <Grid style={{backgroundColor: Color.light, paddingBottom: '20px', paddingTop: '20px',}}>
+                <Grid item
+                      direction="row"
+                      justifyContent="center"
+                      alignItems="center" spacing={1} xs={6}>
+                    <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
+                    <h2 style={{color: Color.theme}}>LATEST NEWS</h2>
+                    {/*<Grid
                     container
                     direction="column"
                     justifyContent="center"
@@ -324,7 +330,7 @@ const Home = () => {
                     <Grid item>
                         <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
                         <h2 style={{color: Color.theme}}>LATEST NEWS</h2>
-                    </Grid>
+                    </Grid>*/}
                     <Grid style={{alignItem: 'center'}} container spacing={1}>
                         <Grid
                             container
