@@ -20,9 +20,9 @@ const navItems = [
     {name: 'Home', nav: '/'},
     {name: 'About', nav: '/about'},
     {name: 'Sectors', nav: '/sectors'},
-    {name: 'Investor Relations', nav: '/investorRelations'},
+    // {name: 'Investor Relations', nav: '/investorRelations'},
     {name: 'Careers', nav: '/careers'},
-    {name: 'News Rooms', nav: '/news'},
+    // {name: 'News Rooms', nav: '/news'},
     {name: 'Contacts', nav: '/contact'},]
 
 const Header = () => {
