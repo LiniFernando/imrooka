@@ -5,6 +5,7 @@ import brand1 from "../img/home/logo1.png";
 import brand2 from "../img/home/logo2.png";
 import brand3 from "../img/home/logo3.png";
 import brand4 from "../img/home/logo4.jpg";
+import Ayur from "../img/home/ayur&Beauty.jpg";
 import Tech from "../img/home/Technology.jpg";
 import apparel from "../img/home/apparel.jpg";
 import clinic from "../img/home/clinicSalon.jpg";
@@ -48,28 +49,18 @@ const Home = () => {
 
     const sectors = [
         {
-            url: Tech,
-            title: 'Technology & Research',
-            width: '40%',
-        },
-        {
-            url: apparel,
-            title: 'Apparel',
-            width: '30%',
-        },
-        {
-            url: clinic,
-            title: 'Clinic & Saloon',
+            url: Ayur,
+            title: 'Ayurvedic & Beauty',
             width: '30%',
         },
         {
             url: products,
             title: 'Products',
-            width: '40%',
+            width: '30%',
         },
         {
-            url: travel,
-            title: 'Travel / Transport',
+            url: Tech,
+            title: 'Technology & Research',
             width: '30%',
         },
         {
@@ -82,11 +73,26 @@ const Home = () => {
             title: 'NGO',
             width: '30%',
         },
+        /*{
+            url: apparel,
+            title: 'Apparel',
+            width: '30%',
+        },
+        {
+            url: clinic,
+            title: 'Clinic & Saloon',
+            width: '30%',
+        },
+        {
+            url: travel,
+            title: 'Travel / Transport',
+            width: '30%',
+        },
         {
             url: education,
             title: 'Education',
             width: '30%',
-        },
+        },*/
     ];
     const news = [
         {
@@ -238,15 +244,11 @@ const Home = () => {
                                         focusRipple
                                         key={image.title}
                                         style={{
-                                            width: '200px',
-                                            borderRadius: '1000px',
-                                            margin: 10
+                                            width: image.width,
                                         }}
                                     >
-                                        <ImageSrc
-                                            style={{backgroundImage: `url(${image.url})`, borderRadius: '1000px'}}/>
-                                        <ImageBackdrop style={{borderRadius: '1000px', height: '200px',}}
-                                                       className="MuiImageBackdrop-root"/>
+                                        <ImageSrc style={{backgroundImage: `url(${image.url})`}}/>
+                                        <ImageBackdrop className="MuiImageBackdrop-root"/>
                                         <Image>
                                             <Typography
                                                 component="span"

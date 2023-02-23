@@ -12,32 +12,23 @@ import ngo from "../img/home/ngo.jpg";
 import education from "../img/home/education.jpg";
 import {styled} from "@mui/material/styles";
 import ButtonBase from "@mui/material/ButtonBase";
+import Ayur from "../img/home/ayur&Beauty.jpg";
 
 const Sectors = () => {
     const sectors = [
         {
-            url: Tech,
-            title: 'Technology & Research',
-            width: '40%',
-        },
-        {
-            url: apparel,
-            title: 'Apparel',
-            width: '30%',
-        },
-        {
-            url: clinic,
-            title: 'Clinic & Saloon',
+            url: Ayur,
+            title: 'Ayurvedic & Beauty',
             width: '30%',
         },
         {
             url: products,
             title: 'Products',
-            width: '40%',
+            width: '30%',
         },
         {
-            url: travel,
-            title: 'Travel / Transport',
+            url: Tech,
+            title: 'Technology & Research',
             width: '30%',
         },
         {
@@ -50,11 +41,26 @@ const Sectors = () => {
             title: 'NGO',
             width: '30%',
         },
+        /*{
+            url: apparel,
+            title: 'Apparel',
+            width: '30%',
+        },
+        {
+            url: clinic,
+            title: 'Clinic & Saloon',
+            width: '30%',
+        },
+        {
+            url: travel,
+            title: 'Travel / Transport',
+            width: '30%',
+        },
         {
             url: education,
             title: 'Education',
             width: '30%',
-        },
+        },*/
     ];
 
     const ImageButton = styled(ButtonBase)(({theme}) => ({
@@ -137,15 +143,11 @@ const Sectors = () => {
                         focusRipple
                         key={image.title}
                         style={{
-                            width: '200px',
-                            borderRadius: '1000px',
-                            margin: 10
+                            width: image.width,
                         }}
                     >
-                        <ImageSrc
-                            style={{backgroundImage: `url(${image.url})`, borderRadius: '1000px'}}/>
-                        <ImageBackdrop style={{borderRadius: '1000px', height: '200px',}}
-                                       className="MuiImageBackdrop-root"/>
+                        <ImageSrc style={{backgroundImage: `url(${image.url})`}}/>
+                        <ImageBackdrop className="MuiImageBackdrop-root"/>
                         <Image>
                             <Typography
                                 component="span"
