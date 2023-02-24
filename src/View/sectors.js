@@ -1,5 +1,6 @@
 import * as React from 'react';
-import homeImage from "../img/sectors/slide.png";
+import oldhomeImage from "../img/sectors/slide.png";
+import homeImage from "../img/sectors/sectorsSlide.jpg";
 import {Grid, Typography} from "@mui/material";
 import {COLORS as Color} from "../Common/Constant/Color";
 import Tech from "../img/home/Technology.jpg";
@@ -131,7 +132,22 @@ const Sectors = () => {
             backgroundColor: 'white', fontSize: ' calc(10px + 2vmin)',
             color: 'white', marginTop: '80px'
         }}>
-            <img style={{width: "100%"}} src={homeImage} alt=""/>
+
+            <div style={{backgroundColor: Color.theme}}>
+                <img style={{width: "100%", height: '300px', objectFit: 'cover', opacity: 0.5}}
+                     src={homeImage} alt=""/>
+            </div>
+            <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>The World of Bee. A
+                journey spanning over 100 years</h3>
+            <h1 style={{
+                color: Color.black,
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 150,
+                textShadow: '0 7px 7px white'
+            }}>BUSINESS SECTORS</h1>
+            {/*<img style={{width: "100%"}} src={oldhomeImage} alt=""/>*/}
             <Grid item
                   direction="row"
                   justifyContent="center"

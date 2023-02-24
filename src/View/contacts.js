@@ -1,5 +1,6 @@
 import * as React from 'react';
-import homeImage from "../img/contact/slide.png";
+import oldhomeImage from "../img/contact/slide.png";
+import homeImage from "../img/contact/contactSlide.jpg";
 import polygons from "../img/contact/polygons.png";
 import {Button, Grid} from "@mui/material";
 import OutlinedInput from '@mui/material/OutlinedInput';
@@ -11,8 +12,21 @@ const Contacts = () => {
             backgroundColor: 'white', fontSize: ' calc(10px + 2vmin)',
             color: 'black', marginTop: '80px'
         }}>
-            <img style={{width: "100%"}} src={homeImage} alt=""/>
 
+            <div style={{backgroundColor: Color.theme}}>
+                <img style={{width: "100%", height: '300px', objectFit: 'cover', opacity: 0.5}}
+                     src={homeImage} alt=""/>
+            </div>
+            <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>Stay Connected With Us</h3>
+            <h1 style={{
+                color: Color.black,
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 150,
+                textShadow: '0 7px 7px white'
+            }}>CONTACT US</h1>
+            {/*<img style={{width: "100%"}} src={oldhomeImage} alt=""/>*/}
             <Grid
                 container
                 direction="row"

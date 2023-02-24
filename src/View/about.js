@@ -1,5 +1,6 @@
 import * as React from 'react';
-import homeImage from "../img/about/slide.png";
+import oldhomeImage from "../img/about/slide.png";
+import homeImage from "../img/about/aboutSlide.jpg";
 import vision from "../img/about/vision.png";
 import mission from "../img/about/mission.png";
 import boardMember from "../img/about/boardMember.jpg";
@@ -65,7 +66,21 @@ const About = () => {
             backgroundColor: 'white', fontSize: ' calc(10px + 2vmin)',
             color: 'white', marginTop: '80px'
         }}>
-            <img style={{width: "100%"}} src={homeImage} alt=""/>
+            <div style={{backgroundColor: Color.theme}}>
+                <img style={{width: "100%", height: '300px', objectFit: 'cover', opacity: 0.5}}
+                     src={homeImage} alt=""/>
+            </div>
+            <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>The World of Bee. A
+                journey spanning over 100 years</h3>
+            <h1 style={{
+                color: Color.black,
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 150,
+                textShadow: '0 7px 7px white'
+            }}>ABOUT US</h1>
+            {/*<img style={{width: "100%"}} src={oldhomeImage} alt=""/>*/}
             {/*start about*/}
             <Grid container
                   direction="row"

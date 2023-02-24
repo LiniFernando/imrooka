@@ -1,5 +1,6 @@
 import * as React from 'react';
-import homeImage from "../img/careers/slide.png";
+import oldhomeImage from "../img/careers/slide.png";
+import homeImage from "../img/careers/careerSlide.jpg";
 import career from "../img/careers/career.jpg";
 import {COLORS as Color} from "../Common/Constant/Color";
 import {Grid} from "@mui/material";
@@ -10,7 +11,21 @@ const Career = () => {
             backgroundColor: Color.white, fontSize: ' calc(10px + 2vmin)',
             color: 'white', marginTop: '80px'
         }}>
-            <img style={{width: "100%"}} src={homeImage} alt=""/>
+            <div style={{backgroundColor: Color.theme}}>
+                <img style={{width: "100%", height: '300px', objectFit: 'cover', opacity: 0.5}}
+                     src={homeImage} alt=""/>
+            </div>
+            <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>We Believe in Our
+                People. Their Success is Our Success.</h3>
+            <h1 style={{
+                color: Color.black,
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 150,
+                textShadow: '0 7px 7px white'
+            }}>CAREERS</h1>
+            {/*<img style={{width: "100%"}} src={oldhomeImage} alt=""/>*/}
             {/*start about*/}
             <Grid container
                   direction="row"
