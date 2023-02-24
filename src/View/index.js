@@ -5,6 +5,8 @@ import brand1 from "../img/home/logo1.png";
 import brand2 from "../img/home/logo2.png";
 import brand3 from "../img/home/logo3.png";
 import brand4 from "../img/home/logo4.jpg";
+import brand5 from "../img/home/logo5.jpg";
+import brand6 from "../img/home/logo6.jpg";
 import Ayur from "../img/home/ayur&Beauty.jpg";
 import Tech from "../img/home/Technology.jpg";
 import apparel from "../img/home/apparel.jpg";
@@ -21,29 +23,64 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import {COLORS as Color} from "../Common/Constant/Color";
 import {useNavigate} from "react-router-dom";
-
+import {AnimationOnScroll} from 'react-animation-on-scroll';
 
 const Home = () => {
     const brands = [
         {
             url: brand1,
             title: 'brand1',
-            width: '40%',
+            width: '20%',
         },
         {
             url: brand2,
             title: 'brand2',
-            width: '30%',
+            width: '20%',
         },
         {
             url: brand3,
             title: 'brand3',
-            width: '30%',
+            width: '20%',
         },
         {
             url: brand4,
             title: 'brand4',
-            width: '30%',
+            width: '20%',
+        },
+        {
+            url: brand5,
+            title: 'brand5',
+            width: '20%',
+        },
+        {
+            url: brand6,
+            title: 'brand6',
+            width: '20%',
+        },
+        {
+            url: brand6,
+            title: 'brand6',
+            width: '20%',
+        },
+        {
+            url: brand5,
+            title: 'brand5',
+            width: '20%',
+        },
+        {
+            url: brand4,
+            title: 'brand4',
+            width: '20%',
+        },
+        {
+            url: brand1,
+            title: 'brand1',
+            width: '20%',
+        },
+        {
+            url: brand2,
+            title: 'brand2',
+            width: '20%',
         },
     ];
 
@@ -186,35 +223,45 @@ const Home = () => {
         }}>
             <img style={{width: "100%"}} src={homeImage} alt=""/>
             {/*start about*/}
-            <Grid container
-                  direction="row"
-                  justifyContent="center"
-                  alignItems="center" spacing={1} style={{marginTop: "20px"}}>
-                <Grid item xs={12} sm={6}>
-                    <div style={{textAlign: 'center'}}>
-                        <h3 style={{color: Color.black}}>WELCOME TO</h3>
-                        <h2 style={{color: Color.theme}}>BEE IN MIND</h2>
-                    </div>
-                    <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>At SH, we
-                        strive to give our students the best
-                        experience in
-                        hospitality studies in the country, including Hospitality, Culinary Arts, Tourism Studies, and
-                        Event Management.</p>
-                    <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>
-                        More than being just a higher educational institute. We advocate the dedication and sincerity
-                        toward hospitality nurturing elites in the industry with comprehensive teaching strategies.</p>
-                    <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>
-                        More than being just a higher educational institute. We advocate the dedication and sincerity
-                        toward hospitality nurturing elites in the industry with comprehensive teaching strategies.</p>
-                    <Button variant="contained" style={ButtonStyle} onClick={() => {
-                        navigate('/about')
-                    }}
-                    >Explore Now</Button>
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+                <Grid container
+                      direction="row"
+                      justifyContent="center"
+                      alignItems="center" spacing={1} style={{marginTop: "20px"}}>
+                    <Grid item xs={12} sm={6}>
+                        <div style={{textAlign: 'center'}}>
+
+                            <h3 style={{color: Color.black}}>WELCOME TO</h3>
+
+                            <h2 style={{color: Color.theme}}>BEE IN MIND</h2>
+                        </div>
+                        <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>At SH,
+                            we
+                            strive to give our students the best
+                            experience in
+                            hospitality studies in the country, including Hospitality, Culinary Arts, Tourism Studies,
+                            and
+                            Event Management.</p>
+                        <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>
+                            More than being just a higher educational institute. We advocate the dedication and
+                            sincerity
+                            toward hospitality nurturing elites in the industry with comprehensive teaching
+                            strategies.</p>
+                        <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>
+                            More than being just a higher educational institute. We advocate the dedication and
+                            sincerity
+                            toward hospitality nurturing elites in the industry with comprehensive teaching
+                            strategies.</p>
+                        <Button variant="contained" style={ButtonStyle} onClick={() => {
+                            navigate('/about')
+                        }}
+                        >Explore Now</Button>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                        <img style={{width: "90%"}} src={about} alt=""/>
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} sm={6}>
-                    <img style={{width: "90%"}} src={about} alt=""/>
-                </Grid>
-            </Grid>
+            </AnimationOnScroll>
             {/*end about*/}
 
             {/*start sectors*/}
@@ -227,89 +274,97 @@ const Home = () => {
                     spacing={5}
                 >
                     <Grid item>
-                        <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
-                        <h2 style={{color: Color.theme}}>BUSINESS SECTORS</h2>
+                        <AnimationOnScroll animateIn="animate__fadeInLeft">
+                            <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
+                        </AnimationOnScroll>
+                        <AnimationOnScroll animateIn="animate__fadeInRight">
+                            <h2 style={{color: Color.theme}}>BUSINESS SECTORS</h2>
+                        </AnimationOnScroll>
                     </Grid>
-                    <Grid style={{alignItem: 'center'}} container spacing={1}>
-                        <Grid item xs={12}>
-                            <Box sx={{
-                                justifyContent: 'center',
-                                display: 'flex',
-                                flexWrap: 'wrap',
-                                minWidth: 300,
-                                width: '100%'
-                            }}>
-                                {sectors.map((image) => (
-                                    <ImageButton
-                                        focusRipple
-                                        key={image.title}
-                                        style={{
-                                            width: image.width,
-                                        }}
-                                    >
-                                        <ImageSrc style={{backgroundImage: `url(${image.url})`}}/>
-                                        <ImageBackdrop className="MuiImageBackdrop-root"/>
-                                        <Image>
-                                            <Typography
-                                                component="span"
-                                                variant="subtitle1"
-                                                color="inherit"
-                                                sx={{
-                                                    position: 'relative',
-                                                    p: 4,
-                                                    pt: 2,
-                                                    pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-                                                }}
-                                            >
-                                                {image.title}
-                                                <ImageMarked className="MuiImageMarked-root"/>
-                                            </Typography>
-                                        </Image>
-                                    </ImageButton>
-                                ))}
-                            </Box>
+                    <AnimationOnScroll animateIn="animate__fadeIn" style={{width: '100%'}}>
+                        <Grid style={{alignItem: 'center'}} container spacing={1}>
+                            <Grid item xs={12}>
+                                <Box sx={{
+                                    justifyContent: 'center',
+                                    display: 'flex',
+                                    flexWrap: 'wrap',
+                                    minWidth: 300,
+                                    width: '100%'
+                                }}>
+                                    {sectors.map((image) => (
+                                        <ImageButton
+                                            focusRipple
+                                            key={image.title}
+                                            style={{
+                                                width: image.width,
+                                            }}
+                                        >
+                                            <ImageSrc style={{backgroundImage: `url(${image.url})`}}/>
+                                            <ImageBackdrop className="MuiImageBackdrop-root"/>
+                                            <Image>
+                                                <Typography
+                                                    component="span"
+                                                    variant="subtitle1"
+                                                    color="inherit"
+                                                    sx={{
+                                                        position: 'relative',
+                                                        p: 4,
+                                                        pt: 2,
+                                                        pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                                                    }}
+                                                >
+                                                    {image.title}
+                                                    <ImageMarked className="MuiImageMarked-root"/>
+                                                </Typography>
+                                            </Image>
+                                        </ImageButton>
+                                    ))}
+                                </Box>
+                            </Grid>
                         </Grid>
-                    </Grid>
+                    </AnimationOnScroll>
                     <img style={{width: "90%"}} src={sectors} alt=""/>
                 </Grid>
             </Grid>
             {/*end sectors*/}
 
             {/*Start Brands*/}
-            <Grid>
-                <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
-                    <Grid
-                        container
-                        direction="column"
-                        justifyContent="center"
-                        alignItems="center"
-                        spacing={5}
-                    >
-                        <Grid item>
-                            <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
-                            <h2 style={{color: Color.theme}}>OUR BRANDS</h2>
-                        </Grid>
-                    </Grid>
-                    <Container style={{
-                        marginTop: 20, marginBottom: 20, width: '100%',
-                    }}>
+            <AnimationOnScroll animateIn="animate__bounceIn">
+                <Grid>
+                    <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
                         <Grid
                             container
-                            direction="row"
+                            direction="column"
                             justifyContent="center"
                             alignItems="center"
-                            spacing={3}
+                            spacing={5}
                         >
-                            {brands.map((image) => (
-                                <Grid item xs={12} sm={3}>
-                                    <img style={{width: "90%"}} src={image.url} alt=""/>
-                                </Grid>
-
-                            ))}
+                            <Grid item>
+                                <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
+                                <h2 style={{color: Color.theme}}>OUR BRANDS</h2>
+                            </Grid>
                         </Grid>
-                    </Container>
+                        <Container style={{
+                            marginBottom: 10, width: '100%',
+                        }}>
+                            <Grid
+                                container
+                                direction="row"
+                                justifyContent="center"
+                                alignItems="center"
+                                spacing={3}
+                            >
+                                {brands.map((image) => (
+                                    <Grid item xs={12} sm={2}>
+                                        <img style={{width: "100%"}} src={image.url} alt=""/>
+                                    </Grid>
+
+                                ))}
+                            </Grid>
+                        </Container>
+                    </Grid>
                 </Grid>
-            </Grid>
+            </AnimationOnScroll>
             {/*End Brands*/}
 
             {/*start news*/}
@@ -374,7 +429,8 @@ const Home = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            {/*end news*/}
+            {/*end news*/
+            }
         </div>
     )
 }
