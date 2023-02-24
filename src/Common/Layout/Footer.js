@@ -4,9 +4,11 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LOGO from "../../img/home/IMROOKA GLOBAL GROUP LOGO.png";
-import facebook from "../../img/home/facebook.png";
-import youtube from "../../img/home/youtube.png";
-import twitter from "../../img/home/twitter.png";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import {COLORS as Color} from "../Constant/Color";
 
 const Footer = () => {
@@ -23,25 +25,16 @@ const Footer = () => {
                           justifyContent="center"
                           alignItems="center" item xs={12} sm={3} style={{textAlign: 'left', width: '100%'}}>
                         <img src={LOGO} style={{width: '80%'}} alt={'logo'}/>
+
                         <Grid container
                               direction="row"
                               justifyContent="center"
                               alignItems="center" style={{width: '80%', marginTop: '20px'}}>
-                            <Grid item justifyContent="center"
-                                  alignItems="center" xs={12} sm={4}
-                                  style={{display: 'flex', paddingBottom: '10px'}}>
-                                <img src={facebook} style={{width: '80%'}} alt={'logo'}/>
-                            </Grid>
-                            <Grid item justifyContent="center"
-                                  alignItems="center" xs={12} sm={4}
-                                  style={{display: 'flex', paddingBottom: '10px'}}>
-                                <img src={youtube} style={{width: '80%'}} alt={'logo'}/>
-                            </Grid>
-                            <Grid item justifyContent="center"
-                                  alignItems="center" xs={12} sm={4}
-                                  style={{display: 'flex', paddingBottom: '10px'}}>
-                                <img src={twitter} style={{width: '80%'}} alt={'logo'}/>
-                            </Grid>
+                            <LinkedInIcon sx={{color: Color.white, fontSize: 40,margin:'0 5px'}}/>
+                            <TwitterIcon sx={{color: Color.white, fontSize: 40,margin:'0 5px'}}/>
+                            <FacebookIcon sx={{color: Color.white, fontSize: 40,margin:'0 5px'}}/>
+                            <InstagramIcon sx={{color: Color.white, fontSize: 40,margin:'0 5px'}}/>
+                            <YouTubeIcon sx={{color: Color.white, fontSize: 40,margin:'0 5px'}}/>
                         </Grid>
                     </Grid>
                     <Grid item xs={12} sm={2} style={{textAlign: 'left'}}>
