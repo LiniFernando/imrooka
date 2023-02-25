@@ -1,174 +1,286 @@
 import * as React from 'react';
 import homeImage from "../img/sectors/slide.png";
-import {Grid, Typography} from "@mui/material";
+import services from "../img/sectors/services.png";
+import director from "../img/about/boardMember.jpg";
+import {Card, CardActionArea, CardContent, CardMedia, Container, Grid} from "@mui/material";
 import {COLORS as Color} from "../Common/Constant/Color";
+import Ayur from "../img/home/ayur&Beauty.jpg";
 import Tech from "../img/home/Technology.jpg";
 import apparel from "../img/home/apparel.jpg";
 import clinic from "../img/home/clinicSalon.jpg";
 import products from "../img/home/products.jpeg";
-import travel from "../img/home/travel.jpg";
 import environment from "../img/home/environment&Farming.jpg";
 import ngo from "../img/home/ngo.jpg";
-import education from "../img/home/education.jpg";
-import {styled} from "@mui/material/styles";
-import ButtonBase from "@mui/material/ButtonBase";
-import {useNavigate, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
+import {useEffect} from "react";
+import about from "../img/home/welcome tile.png";
+import {AnimationOnScroll} from "react-animation-on-scroll";
+import brand1 from "../img/home/logo1.png";
+import brand2 from "../img/home/logo2.png";
+import brand3 from "../img/home/logo3.png";
+import brand4 from "../img/home/logo4.jpg";
+import brand5 from "../img/home/logo5.jpg";
+import brand6 from "../img/home/logo6.jpg";
 
 const Sector = () => {
-    const navigate = useNavigate();
-    let {id} = useParams();
-    const sectors = [
+    let {name} = useParams();
+    const [homeImg, setHomeImg] = React.useState();
+    useEffect(() => {
+        switch (name) {
+            case 'Ayurvedic & Beauty':
+                setHomeImg(Ayur);
+                break;
+            case 'Products':
+                setHomeImg(products);
+                break;
+            case 'Technology & Research':
+                setHomeImg(Tech);
+                break;
+            case 'Environment & Farming':
+                setHomeImg(environment);
+                break;
+            case 'NGO':
+                setHomeImg(ngo);
+                break;
+            default:
+                setHomeImg(homeImage);
+        }
+    }, []);
+    const brands = [
+        {
+            url: brand1,
+            title: 'brand1',
+            width: '20%',
+        },
+        {
+            url: brand2,
+            title: 'brand2',
+            width: '20%',
+        },
+        {
+            url: brand3,
+            title: 'brand3',
+            width: '20%',
+        },
+        {
+            url: brand4,
+            title: 'brand4',
+            width: '20%',
+        },
+        {
+            url: brand5,
+            title: 'brand5',
+            width: '20%',
+        },
+        {
+            url: brand6,
+            title: 'brand6',
+            width: '20%',
+        },
+    ];
+    const companies = [
         {
             url: Tech,
             title: 'Technology & Research',
+            discription: ' Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
             width: '40%',
         },
         {
             url: apparel,
             title: 'Apparel',
+            discription: ' Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
             width: '30%',
         },
         {
             url: clinic,
             title: 'Clinic & Saloon',
-            width: '30%',
-        },
-        {
-            url: products,
-            title: 'Products',
-            width: '40%',
-        },
-        {
-            url: travel,
-            title: 'Travel / Transport',
-            width: '30%',
-        },
-        {
-            url: environment,
-            title: 'Environment / Farming',
-            width: '30%',
-        },
-        {
-            url: ngo,
-            title: 'NGO',
-            width: '30%',
-        },
-        {
-            url: education,
-            title: 'Education',
+            discription: ' Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
             width: '30%',
         },
     ];
-
-    const ImageButton = styled(ButtonBase)(({theme}) => ({
-        position: 'relative',
-        height: 200,
-        [theme.breakpoints.down('sm')]: {
-            width: '100% !important', // Overrides inline-style
-            height: 100,
-        },
-        '&:hover, &.Mui-focusVisible': {
-            zIndex: 1,
-            '& .MuiImageBackdrop-root': {
-                opacity: 0.15,
-            },
-            '& .MuiImageMarked-root': {
-                opacity: 0,
-            },
-            '& .MuiTypography-root': {
-                border: '4px solid currentColor',
-            },
-        },
-    }));
-
-    const ImageSrc = styled('span')({
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center 40%',
-    });
-
-    const Image = styled('span')(({theme}) => ({
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: theme.palette.common.white,
-    }));
-
-    const ImageBackdrop = styled('span')(({theme}) => ({
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        backgroundColor: theme.palette.common.black,
-        opacity: 0.4,
-        transition: theme.transitions.create('opacity'),
-    }));
-
-    const ImageMarked = styled('span')(({theme}) => ({
-        height: 3,
-        width: 18,
-        backgroundColor: theme.palette.common.white,
-        position: 'absolute',
-        bottom: -2,
-        left: 'calc(50% - 9px)',
-        transition: theme.transitions.create('opacity'),
-    }));
     return (
         <div style={{
             backgroundColor: 'white', fontSize: ' calc(10px + 2vmin)',
             color: 'white', marginTop: '80px'
         }}>
-            <img style={{width: "100%"}} src={homeImage} alt=""/>
-            <Grid item
+            <div style={{backgroundColor: Color.theme}}>
+                <img style={{width: "100%", height: '300px', objectFit: 'cover', opacity: 0.5}}
+                     src={homeImg} alt=""/>
+            </div>
+            <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>The World of Bee. A
+                journey spanning over 100 years</h3>
+            <h1 style={{
+                color: Color.black,
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 150,
+                textShadow: '0 7px 7px white'
+            }}>{name}</h1>
+            {/*<AnimationOnScroll animateIn="animate__fadeInUp">*/}
+            <Grid container
                   direction="row"
                   justifyContent="center"
-                  alignItems="center" spacing={1} style={{marginTop: "20px"}} xs={6}>
-                <h2 style={{color: Color.theme}}>OUR DIVERSITY</h2>
-                <h3 style={{color: 'black'}}>The World of Bee. A journey spanning over 100 years</h3>
-                {sectors.map((image) => (
-                    <ImageButton
-                        focusRipple
-                        key={image.title}
-                        style={{
-                            width: '200px',
-                            borderRadius: '1000px',
-                            margin: 10
-                        }}
-                    >
-                        <ImageSrc
-                            style={{backgroundImage: `url(${image.url})`, borderRadius: '1000px'}}/>
-                        <ImageBackdrop style={{borderRadius: '1000px', height: '200px',}}
-                                       className="MuiImageBackdrop-root"/>
-                        <Image>
-                            <Typography
-                                component="span"
-                                variant="subtitle1"
-                                color="inherit"
-                                sx={{
-                                    position: 'relative',
-                                    p: 4,
-                                    pt: 2,
-                                    pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-                                }}
-                            >
-                                {image.title}
-                                <ImageMarked className="MuiImageMarked-root"/>
-                            </Typography>
-                        </Image>
-                    </ImageButton>
-                ))}
+                  alignItems="center" spacing={1} style={{marginTop: "20px"}}>
+                <Grid item xs={12} sm={6}>
+                    <div style={{textAlign: 'center'}}>
+                        <h2 style={{color: Color.theme}}>{name}</h2>
+                    </div>
+                    <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>At SH,
+                        we
+                        strive to give our students the best
+                        experience in
+                        hospitality studies in the country, including Hospitality, Culinary Arts, Tourism Studies,
+                        and
+                        Event Management.</p>
+                    <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>
+                        More than being just a higher educational institute. We advocate the dedication and
+                        sincerity
+                        toward hospitality nurturing elites in the industry with comprehensive teaching
+                        strategies.</p>
+                    <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>
+                        More than being just a higher educational institute. We advocate the dedication and
+                        sincerity
+                        toward hospitality nurturing elites in the industry with comprehensive teaching
+                        strategies.</p>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <img style={{width: "90%"}} src={about} alt=""/>
+                </Grid>
             </Grid>
+            {/*</AnimationOnScroll>*/}
             {/*end sectors*/}
+
+            <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
+                <Grid
+                    container
+                    direction="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    spacing={5}
+                >
+                    <Grid item>
+                        <AnimationOnScroll animateIn="animate__fadeInRight">
+                            <h2 style={{color: Color.theme}}>OUR SERVICES</h2>
+                        </AnimationOnScroll>
+                    </Grid>
+                    <img style={{width: "75%"}} src={services} alt=""/>
+                </Grid>
+            </Grid>
+
+            {/*start Brands*/}
+            <Grid>
+                <Grid style={{backgroundColor: Color.light, paddingBottom: '20px', marginTop: '50px',}}>
+                    <Grid
+                        container
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={5}
+                    >
+                        <Grid item>
+                            <h2 style={{color: Color.theme}}>OUR BRANDS</h2>
+                        </Grid>
+                    </Grid>
+                    <Container style={{
+                        marginBottom: 10, width: '100%',
+                    }}>
+                        <Grid
+                            container
+                            direction="row"
+                            justifyContent="center"
+                            alignItems="center"
+                            spacing={3}
+                        >
+                            {brands.map((image) => (
+                                <Grid item xs={12} sm={2} key={image.url}>
+                                    <img style={{width: "100%"}} src={image.url} alt=""/>
+                                </Grid>
+
+                            ))}
+                        </Grid>
+                    </Container>
+                </Grid>
+            </Grid>
+            {/*end brands*/}
+
+            {/*start companies*/}
+            <Grid style={{paddingBottom: '20px', paddingTop: '20px',}}>
+                <Grid item
+                      justifyContent="center"
+                      alignItems="center"
+                      xs={6}>
+                    <h2 style={{color: Color.theme}}>OUR COMPANIES</h2>
+                    <Grid style={{alignItem: 'center'}} container spacing={1}>
+                        <Grid
+                            container
+                            direction="row"
+                            justifyContent="center"
+                            alignItems="center"
+                            spacing={3}
+                            style={{paddingLeft: '10%', paddingRight: '10%', paddingBottom: 50}}
+                        >
+                            {companies.map((companiesDetail) => (
+                                <Grid key={companiesDetail.url} item xs={12} sm={4} style={{marginBottom: 20}}>
+                                    <Card>
+                                        <CardActionArea>
+                                            <CardMedia
+                                                component="img"
+                                                height="140"
+                                                image={companiesDetail.url}
+                                                alt="green iguana"
+                                            />
+                                            <CardContent>
+                                                <h2 style={{
+                                                    color: Color.theme,
+                                                    margin: 0,
+                                                    fontFamily: 'Baskervville'
+                                                }}>
+                                                    ASDF(Pvt)Ltd
+                                                </h2>
+                                                <h2 style={{fontFamily: 'Baskervville'}}>
+                                                    {companiesDetail.discription}
+                                                </h2>
+                                            </CardContent>
+                                        </CardActionArea>
+                                    </Card>
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+            {/*end companies*/}
+
+            {/*director*/}
+            <Grid container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center" spacing={1} style={{backgroundColor: Color.light, marginTop: "20px"}}>
+                <Grid item xs={12} sm={6}>
+                    <img style={{width: "40%"}} src={director} alt=""/>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <div style={{
+                        backgroundColor: Color.regular,
+                        borderRadius: 100,
+                        width: '70%'
+                    }}>
+                        <h5 style={{
+                            margin: 0,
+                            padding: '10px 0',
+                            color: 'black'
+                        }}>Mr.Saman Kumara</h5>
+                        <h5 style={{
+                            margin: 0,
+                            padding: '10px 0',
+                            color: Color.theme
+                        }}>Managing Director</h5>
+                    </div>
+                </Grid>
+
+            </Grid>
+
         </div>
     )
 }

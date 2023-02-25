@@ -42,6 +42,7 @@ const Header = () => {
                     <ListItem key={item.name}>
                         <ListItemButton sx={{textAlign: 'center'}}>
                             <ListItemText style={{color: Color.regular}} primary={item.name} onClick={() => {
+                                window.scrollTo(0, 0);
                                 navigate(item.nav)
                             }}/>
                         </ListItemButton>

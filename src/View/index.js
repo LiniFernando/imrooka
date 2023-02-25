@@ -12,11 +12,8 @@ import Tech from "../img/home/Technology.jpg";
 import apparel from "../img/home/apparel.jpg";
 import clinic from "../img/home/clinicSalon.jpg";
 import products from "../img/home/products.jpeg";
-import travel from "../img/home/travel.jpg";
 import environment from "../img/home/environment&Farming.jpg";
 import ngo from "../img/home/ngo.jpg";
-import education from "../img/home/education.jpg";
-
 import {Button, Grid, Container, Typography, Card, CardActionArea, CardMedia, CardContent} from "@mui/material";
 import {styled} from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -102,7 +99,7 @@ const Home = () => {
         },
         {
             url: environment,
-            title: 'Environment / Farming',
+            title: 'Environment & Farming',
             width: '30%',
         },
         {
@@ -298,6 +295,10 @@ const Home = () => {
                                             style={{
                                                 width: image.width,
                                             }}
+                                            onClick={() => {
+                                                window.scrollTo(0, 0);
+                                                navigate(`/sectors/${image.title}`)
+                                            }}
                                         >
                                             <ImageSrc style={{backgroundImage: `url(${image.url})`}}/>
                                             <ImageBackdrop className="MuiImageBackdrop-root"/>
@@ -355,7 +356,7 @@ const Home = () => {
                                 spacing={3}
                             >
                                 {brands.map((image) => (
-                                    <Grid item xs={12} sm={2}>
+                                    <Grid item xs={12} sm={2} key={image.url}>
                                         <img style={{width: "100%"}} src={image.url} alt=""/>
                                     </Grid>
 
@@ -370,9 +371,10 @@ const Home = () => {
             {/*start news*/}
             <Grid style={{backgroundColor: Color.light, paddingBottom: '20px', paddingTop: '20px',}}>
                 <Grid item
-                      direction="row"
                       justifyContent="center"
-                      alignItems="center" spacing={1} xs={6}>
+                      alignItems="center"
+                    // spacing={1}
+                      xs={6}>
                     <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
                     <h2 style={{color: Color.theme}}>LATEST NEWS</h2>
                     {/*<Grid
@@ -396,7 +398,7 @@ const Home = () => {
                             style={{paddingLeft: '10%', paddingRight: '10%', paddingBottom: 50}}
                         >
                             {news.map((newsDetail) => (
-                                <Grid item xs={12} sm={4} style={{marginBottom: 20}}>
+                                <Grid key={newsDetail.url} item xs={12} sm={4} style={{marginBottom: 20}}>
                                     <Card>
                                         <CardActionArea>
                                             <CardMedia

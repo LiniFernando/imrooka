@@ -1,19 +1,15 @@
 import * as React from 'react';
-import oldhomeImage from "../img/sectors/slide.png";
 import homeImage from "../img/sectors/sectorsSlide.jpg";
 import {Grid, Typography} from "@mui/material";
 import {COLORS as Color} from "../Common/Constant/Color";
 import Tech from "../img/home/Technology.jpg";
-import apparel from "../img/home/apparel.jpg";
-import clinic from "../img/home/clinicSalon.jpg";
 import products from "../img/home/products.jpeg";
-import travel from "../img/home/travel.jpg";
 import environment from "../img/home/environment&Farming.jpg";
 import ngo from "../img/home/ngo.jpg";
-import education from "../img/home/education.jpg";
 import {styled} from "@mui/material/styles";
 import ButtonBase from "@mui/material/ButtonBase";
 import Ayur from "../img/home/ayur&Beauty.jpg";
+import {useNavigate} from "react-router-dom";
 
 const Sectors = () => {
     const sectors = [
@@ -34,7 +30,7 @@ const Sectors = () => {
         },
         {
             url: environment,
-            title: 'Environment / Farming',
+            title: 'Environment & Farming',
             width: '30%',
         },
         {
@@ -127,6 +123,7 @@ const Sectors = () => {
         left: 'calc(50% - 9px)',
         transition: theme.transitions.create('opacity'),
     }));
+    const navigate = useNavigate();
     return (
         <div style={{
             backgroundColor: 'white', fontSize: ' calc(10px + 2vmin)',
@@ -160,6 +157,10 @@ const Sectors = () => {
                         key={image.title}
                         style={{
                             width: image.width,
+                        }}
+                        onClick={() => {
+                            window.scrollTo(0, 0);
+                            navigate(`/sectors/${image.title}`)
                         }}
                     >
                         <ImageSrc style={{backgroundImage: `url(${image.url})`}}/>
