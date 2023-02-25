@@ -69,6 +69,7 @@ const Header = () => {
                         {navItems.map((item) => (
                             <Button style={{color: Color.regular, fontWeight: 'bolder'}} key={item.name}
                                     onClick={() => {
+                                        window.scrollTo(0, 0);
                                         navigate(item.nav)
                                     }} children={item.name}/>
                         ))}
