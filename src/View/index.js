@@ -250,6 +250,7 @@ const Home = () => {
                             toward hospitality nurturing elites in the industry with comprehensive teaching
                             strategies.</p>
                         <Button variant="contained" style={ButtonStyle} onClick={() => {
+                            window.scrollTo(0, 0);
                             navigate('/about')
                         }}
                         >Explore Now</Button>
@@ -330,21 +331,25 @@ const Home = () => {
             {/*end sectors*/}
 
             {/*Start Brands*/}
-            <AnimationOnScroll animateIn="animate__bounceIn">
-                <Grid>
-                    <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
-                        <Grid
-                            container
-                            direction="column"
-                            justifyContent="center"
-                            alignItems="center"
-                            spacing={5}
-                        >
-                            <Grid item>
+            <Grid>
+                <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
+                    <Grid
+                        container
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={5}
+                    >
+                        <Grid item>
+                            <AnimationOnScroll animateIn="animate__fadeInLeft">
                                 <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
+                            </AnimationOnScroll>
+                            <AnimationOnScroll animateIn="animate__fadeInRight">
                                 <h2 style={{color: Color.theme}}>OUR BRANDS</h2>
-                            </Grid>
+                            </AnimationOnScroll>
                         </Grid>
+                    </Grid>
+                    <AnimationOnScroll animateIn="animate__fadeIn" style={{width: '100%'}}>
                         <Container style={{
                             marginBottom: 10, width: '100%',
                         }}>
@@ -363,9 +368,9 @@ const Home = () => {
                                 ))}
                             </Grid>
                         </Container>
-                    </Grid>
+                    </AnimationOnScroll>
                 </Grid>
-            </AnimationOnScroll>
+            </Grid>
             {/*End Brands*/}
 
             {/*start news*/}
@@ -375,8 +380,12 @@ const Home = () => {
                       alignItems="center"
                     // spacing={1}
                       xs={6}>
-                    <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
-                    <h2 style={{color: Color.theme}}>LATEST NEWS</h2>
+                    <AnimationOnScroll animateIn="animate__fadeInLeft">
+                        <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
+                    </AnimationOnScroll>
+                    <AnimationOnScroll animateIn="animate__fadeInRight">
+                        <h2 style={{color: Color.theme}}>LATEST NEWS</h2>
+                    </AnimationOnScroll>
                     {/*<Grid
                     container
                     direction="column"
@@ -388,51 +397,52 @@ const Home = () => {
                         <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
                         <h2 style={{color: Color.theme}}>LATEST NEWS</h2>
                     </Grid>*/}
-                    <Grid style={{alignItem: 'center'}} container spacing={1}>
-                        <Grid
-                            container
-                            direction="row"
-                            justifyContent="center"
-                            alignItems="center"
-                            spacing={3}
-                            style={{paddingLeft: '10%', paddingRight: '10%', paddingBottom: 50}}
-                        >
-                            {news.map((newsDetail) => (
-                                <Grid key={newsDetail.url} item xs={12} sm={4} style={{marginBottom: 20}}>
-                                    <Card>
-                                        <CardActionArea>
-                                            <CardMedia
-                                                component="img"
-                                                height="140"
-                                                image={newsDetail.url}
-                                                alt="green iguana"
-                                            />
-                                            <CardContent>
-                                                <h2 style={{
-                                                    color: Color.theme,
-                                                    margin: 0,
-                                                    fontFamily: 'Baskervville'
-                                                }}>
-                                                    {newsDetail.title}
-                                                </h2>
-                                                <h2 style={{fontFamily: 'Baskervville'}}>
-                                                    {newsDetail.discription}
-                                                </h2>
-                                            </CardContent>
-                                        </CardActionArea>
-                                    </Card>
-                                </Grid>
-                            ))}
-                            <Button variant="contained" style={ButtonStyle} onClick={() => {
+                    <AnimationOnScroll animateIn="animate__fadeIn">
+                        <Grid style={{alignItem: 'center'}} container spacing={1}>
+                            <Grid
+                                container
+                                direction="row"
+                                justifyContent="center"
+                                alignItems="center"
+                                spacing={3}
+                                style={{paddingLeft: '10%', paddingRight: '10%', paddingBottom: 50}}
+                            >
+                                {news.map((newsDetail) => (
+                                    <Grid key={newsDetail.url} item xs={12} sm={4} style={{marginBottom: 20}}>
+                                        <Card>
+                                            <CardActionArea>
+                                                <CardMedia
+                                                    component="img"
+                                                    height="140"
+                                                    image={newsDetail.url}
+                                                    alt="green iguana"
+                                                />
+                                                <CardContent>
+                                                    <h2 style={{
+                                                        color: Color.theme,
+                                                        margin: 0,
+                                                        fontFamily: 'Baskervville'
+                                                    }}>
+                                                        {newsDetail.title}
+                                                    </h2>
+                                                    <h2 style={{fontFamily: 'Baskervville'}}>
+                                                        {newsDetail.discription}
+                                                    </h2>
+                                                </CardContent>
+                                            </CardActionArea>
+                                        </Card>
+                                    </Grid>
+                                ))}
+                                {/*<Button variant="contained" style={ButtonStyle} onClick={() => {
                                 navigate('/news')
                             }}
-                            >More News</Button>
+                            >More News</Button>*/}
+                            </Grid>
                         </Grid>
-                    </Grid>
+                    </AnimationOnScroll>
                 </Grid>
             </Grid>
-            {/*end news*/
-            }
+            {/*end news*/}
         </div>
     )
 }

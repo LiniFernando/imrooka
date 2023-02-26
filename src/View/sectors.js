@@ -148,7 +148,7 @@ const Sectors = () => {
             <Grid item
                   direction="row"
                   justifyContent="center"
-                  alignItems="center" spacing={1} style={{marginTop: "20px"}} xs={6}>
+                  alignItems="center" spacing={1} style={{margin: "20px 0", paddingBottom: 20}} xs={6}>
                 <h2 style={{color: Color.theme}}>OUR DIVERSITY</h2>
                 <h3 style={{color: 'black'}}>The World of Bee. A journey spanning over 100 years</h3>
                 {sectors.map((image) => (

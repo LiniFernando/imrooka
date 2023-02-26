@@ -1,5 +1,4 @@
 import * as React from 'react';
-import oldhomeImage from "../img/about/slide.png";
 import homeImage from "../img/about/aboutSlide.jpg";
 import vision from "../img/about/vision.png";
 import mission from "../img/about/mission.png";
@@ -225,66 +224,72 @@ const About = () => {
                         alignItems="center"
                         spacing={5}
                     >
-                        <Grid item>
-                            <h2 style={{color: Color.theme}}>BOARD OF DIRECTORS</h2>
-                        </Grid>
+                        <AnimationOnScroll animateIn="animate__fadeInDown">
+                            <Grid item>
+                                <h2 style={{color: Color.theme}}>BOARD OF DIRECTORS</h2>
+                            </Grid>
+                        </AnimationOnScroll>
                     </Grid>
-                    <Container style={{
-                        marginTop: 20, marginBottom: 20, width: '100%',
-                    }}>
-                        <Grid
-                            container
-                            direction="row"
-                            justifyContent="center"
-                            alignItems="center"
-                            spacing={3}
-                        >
-                            {boardMembers.map((member) => (
-                                <Grid item xs={12} sm={4}>
-                                    <img style={{width: "60%"}} src={member.url} alt=""/>
-                                    <div style={{
-                                        backgroundColor: Color.light,
-                                        borderRadius: 100,
-                                    }}>
-                                        <h5 style={{
-                                            margin: 0,
-                                            paddingTop: '5px',
-                                            color: Color.theme
-                                        }}>{member.position}</h5>
-                                        <h6 style={{
-                                            margin: 0,
-                                            paddingBottom: '10px',
-                                            color: 'black'
-                                        }}>{member.name}</h6>
-                                    </div>
-                                </Grid>
+                    <AnimationOnScroll animateIn="animate__fadeIn" style={{width: '100%'}}>
+                        <Container style={{
+                            marginTop: 20, marginBottom: 20, width: '100%',
+                        }}>
+                            <Grid
+                                container
+                                direction="row"
+                                justifyContent="center"
+                                alignItems="center"
+                                spacing={3}
+                            >
+                                {boardMembers.map((member) => (
+                                    <Grid item xs={12} sm={4}>
+                                        <img style={{width: "60%"}} src={member.url} alt=""/>
+                                        <div style={{
+                                            backgroundColor: Color.light,
+                                            borderRadius: 100,
+                                        }}>
+                                            <h5 style={{
+                                                margin: 0,
+                                                paddingTop: '5px',
+                                                color: Color.theme
+                                            }}>{member.position}</h5>
+                                            <h6 style={{
+                                                margin: 0,
+                                                paddingBottom: '10px',
+                                                color: 'black'
+                                            }}>{member.name}</h6>
+                                        </div>
+                                    </Grid>
 
-                            ))}
-                        </Grid>
-                    </Container>
+                                ))}
+                            </Grid>
+                        </Container>
+                    </AnimationOnScroll>
                 </Grid>
             </Grid>
             {/*End Directors' board*/}
 
             {/*Start Brands*/}
-            <AnimationOnScroll animateIn="animate__fadeIn">
-                <Grid container
-                      direction="row"
-                      justifyContent="center"
-                      alignItems="center" spacing={1}
-                      style={{backgroundColor: Color.light, paddingBottom: '20px', marginTop: '50px',}}>
-                    <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
-                        <Grid
-                            container
-                            direction="column"
-                            justifyContent="center"
-                            alignItems="center"
-                            spacing={5}
-                        >
+            <Grid container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center" spacing={1}
+                  style={{backgroundColor: Color.light, paddingBottom: '20px', marginTop: '50px',}}>
+                <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
+                    <Grid
+                        container
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={5}
+                    >
+                        <AnimationOnScroll animateIn="animate__fadeInDown">
                             <Grid item>
                                 <h2 style={{color: Color.theme}}>OUR BRANDS</h2>
                             </Grid>
-                        </Grid>
+                        </AnimationOnScroll>
+                    </Grid>
+                    <AnimationOnScroll animateIn="animate__fadeIn" style={{width: '100%'}}>
                         <Container style={{
                             marginTop: 20, marginBottom: 20, width: '100%',
                         }}>
@@ -303,9 +308,9 @@ const About = () => {
                                 ))}
                             </Grid>
                         </Container>
-                    </Grid>
+                    </AnimationOnScroll>
                 </Grid>
-            </AnimationOnScroll>
+            </Grid>
             {/*End Brands*/}
         </div>
     )
