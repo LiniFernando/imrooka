@@ -1,5 +1,4 @@
 import * as React from 'react';
-import oldhomeImage from "../img/contact/slide.png";
 import homeImage from "../img/contact/contactSlide.jpg";
 import polygons from "../img/contact/polygons.png";
 import {Button, Grid} from "@mui/material";
@@ -17,7 +16,8 @@ const Contacts = () => {
                 <img style={{width: "100%", height: '300px', objectFit: 'cover', opacity: 0.5}}
                      src={homeImage} alt=""/>
             </div>
-            <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>Stay Connected With Us</h3>
+            <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>Stay Connected With
+                Us</h3>
             <h1 style={{
                 color: Color.black,
                 position: 'absolute',
@@ -105,7 +105,7 @@ const Contacts = () => {
             </Grid>
             <iframe
                 title={'location'}
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15849.638463201407!2d79.908075!3d6.7197677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2460f9825efcd%3A0x4edf70b9ccff9fc3!2z4La04LeP4Lax4Lav4LeU4La7IOC2uOC3luC2veC3kuC2miDgtrvgt53gt4Tgtr0!5e0!3m2!1ssi!2slk!4v1658444764386!5m2!1ssi!2slk"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15839.086209797346!2d79.96036142036846!3d7.036114193228452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f91b752aa559%3A0x488ff29b094d8807!2sParakandeniya!5e0!3m2!1ssi!2slk!4v1677424176920!5m2!1ssi!2slk"
                 width="600" height="400" style={{border: 0, width: '100%'}} allowFullScreen="" loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"/>
         </div>
