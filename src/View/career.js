@@ -1,5 +1,4 @@
 import * as React from 'react';
-import oldhomeImage from "../img/careers/slide.png";
 import homeImage from "../img/careers/careerSlide.jpg";
 import career from "../img/careers/career.jpg";
 import {COLORS as Color} from "../Common/Constant/Color";
@@ -35,6 +34,8 @@ const Career = () => {
                     <h2 style={{color: Color.theme}}>VACANCIES</h2>
                     <h3 style={{color: 'black'}}>Thank you for your interest in working with us.</h3>
                     <h3 style={{color: 'black'}}>At the moment we do not have any job vacancies.</h3>
+                    <h3 style={{color: 'black'}}>We are happy to receive your blind application
+                        at <u>info@imrookaglobalgroup.com</u></h3>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <img style={{width: "90%"}} src={career} alt=""/>
