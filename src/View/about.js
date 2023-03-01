@@ -215,7 +215,7 @@ const About = () => {
             {/*end vission & mission*/}
 
             {/*Start Directors' board*/}
-            <Grid>
+            {/*<Grid>
                 <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
                     <Grid
                         container
@@ -266,8 +266,52 @@ const About = () => {
                         </Container>
                     </AnimationOnScroll>
                 </Grid>
-            </Grid>
+            </Grid>*/}
             {/*End Directors' board*/}
+
+            {/*Start companies*/}
+            <Grid container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center" spacing={1}
+                  style={{paddingBottom: '20px', marginTop: '50px',}}>
+                <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
+                    <Grid
+                        container
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={5}
+                    >
+                        <AnimationOnScroll animateIn="animate__fadeInDown">
+                            <Grid item>
+                                <h2 style={{color: Color.theme}}>OUR COMPANIES</h2>
+                            </Grid>
+                        </AnimationOnScroll>
+                    </Grid>
+                    <AnimationOnScroll animateIn="animate__fadeIn" style={{width: '100%'}}>
+                        <Container style={{
+                            marginTop: 20, marginBottom: 20, width: '100%',
+                        }}>
+                            <Grid
+                                container
+                                direction="row"
+                                justifyContent="center"
+                                alignItems="center"
+                                spacing={3}
+                            >
+                                {brands.map((image) => (
+                                    <Grid item xs={12} sm={2}>
+                                        <img style={{width: "100%"}} src={image.url} alt=""/>
+                                    </Grid>
+
+                                ))}
+                            </Grid>
+                        </Container>
+                    </AnimationOnScroll>
+                </Grid>
+            </Grid>
+            {/*End companies*/}
 
             {/*Start Brands*/}
             <Grid container
