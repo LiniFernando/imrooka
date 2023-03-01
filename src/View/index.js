@@ -294,7 +294,7 @@ const Home = () => {
                                             focusRipple
                                             key={image.title}
                                             style={{
-                                                width: image.width,
+                                                width: image.width, margin: 10
                                             }}
                                             onClick={() => {
                                                 window.scrollTo(0, 0);
