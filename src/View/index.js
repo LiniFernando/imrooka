@@ -218,7 +218,50 @@ const Home = () => {
             backgroundColor: Color.white, fontSize: ' calc(10px + 2vmin)',
             color: 'white', marginTop: '80px'
         }}>
-            <img style={{width: "100%"}} src={homeImage} alt=""/>
+            <div style={{backgroundColor: Color.theme}}>
+                <img style={{width: "100%", height: '500px', objectFit: 'cover', opacity: 0.5}}
+                     src={about} alt=""/>
+            </div>
+            <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>70 Companies
+                7 Industry Sectors
+                Sri Lanka’s Premier
+                Diversified Company</h3>
+            <h1 style={{
+                color: Color.black,
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 150,
+                textShadow: '0 7px 7px white'
+            }}>70 Companies</h1>
+            <h1 style={{
+                color: Color.black,
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 220,
+                textShadow: '0 7px 7px white'
+            }}>
+                7 Industry Sectors</h1>
+            <h1 style={{
+                color: Color.black,
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 290,
+                textShadow: '0 7px 7px white'
+            }}>
+                Sri Lanka’s Premier</h1>
+            <h1 style={{
+                color: Color.black,
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 360,
+                textShadow: '0 7px 7px white'
+            }}>
+                Diversified Company</h1>
+            {/*<img style={{width: "100%"}} src={homeImage} alt=""/>*/}
             {/*start about*/}
             <AnimationOnScroll animateIn="animate__fadeInUp">
                 <Grid container
@@ -230,7 +273,7 @@ const Home = () => {
 
                             <h3 style={{color: Color.black}}>WELCOME TO</h3>
 
-                            <h2 style={{color: Color.theme}}>BEE IN MIND</h2>
+                            <h2 style={{color: Color.theme}}>IMROOKA GLOBAL GROUP</h2>
                         </div>
                         <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>At SH,
                             we
