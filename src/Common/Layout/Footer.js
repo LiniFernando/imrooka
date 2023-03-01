@@ -32,8 +32,14 @@ const Footer = () => {
                               alignItems="center" style={{width: '80%', marginTop: '20px'}}>
                             <LinkedInIcon sx={{color: Color.white, fontSize: 40, margin: '0 5px'}}/>
                             <TwitterIcon sx={{color: Color.white, fontSize: 40, margin: '0 5px'}}/>
-                            <FacebookIcon sx={{color: Color.white, fontSize: 40, margin: '0 5px'}}/>
-                            <InstagramIcon sx={{color: Color.white, fontSize: 40, margin: '0 5px'}}/>
+                            <Link href="https://www.facebook.com/profile.php?id=100090551148484&is_tour_dismissed=true"
+                                  underline="none" color="inherit">
+                                <FacebookIcon sx={{color: Color.white, fontSize: 40, margin: '0 5px'}}/>
+                            </Link>
+                            <Link href="https://instagram.com/imrooka_global_group?igshid=YmMyMTA2M2Y=" underline="none"
+                                  color="inherit">
+                                <InstagramIcon sx={{color: Color.white, fontSize: 40, margin: '0 5px'}}/>
+                            </Link>
                             <YouTubeIcon sx={{color: Color.white, fontSize: 40, margin: '0 5px'}}/>
                         </Grid>
                     </Grid>
