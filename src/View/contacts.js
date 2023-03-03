@@ -1,6 +1,6 @@
 import * as React from 'react';
 import homeImage from "../img/contact/contactSlide.jpg";
-import {Button, Container, Grid, Typography} from "@mui/material";
+import {Button, Grid, Typography} from "@mui/material";
 import OutlinedInput from '@mui/material/OutlinedInput';
 import {COLORS as Color} from "../Common/Constant/Color";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -39,7 +39,7 @@ const Contacts = () => {
                       direction="column"
                       justifyContent="center"
                       alignItems="center"
-                      spacing={3} xs={10} sm={5}>
+                      spacing={3} xs={10} md={5}>
                     <h2 style={{color: Color.theme}}>INQUIRE NOW</h2>
                     <OutlinedInput style={{
                         backgroundColor: Color.light,
@@ -100,47 +100,58 @@ const Contacts = () => {
                 </Grid>
 
                 <Grid item justifyContent="center"
-                      alignItems="center" xs={10} sm={5}>
-                    <Container style={{
-                        display: 'flex',
+                      alignItems="center" xs={10} md={5} spacing={3}>
+                    <Grid
+                        container style={{
                         padding: '20px 0',
                         backgroundColor: Color.light,
                         borderRadius: '0 50px',
-                        margin: '20px 0'
+                        margin: '5px 0'
                     }}>
-                        <LocationOnIcon sx={{color: Color.theme, fontSize: 50, marginLeft: 10}}/>
-                        <Container>
+                        <Grid xs={12} item justifyContent="center">
+                            <LocationOnIcon sx={{color: Color.theme, fontSize: 50}}/>
+                        </Grid>
+                        <Grid item justifyContent="center"
+                              alignItems="center" xs={12}>
                             No: 99/01, Parakandeniya,
                             Imbulgoda, Sri Lanka
-                        </Container>
-                    </Container>
-                    <Container style={{
-                        display: 'flex',
+                        </Grid>
+                    </Grid>
+                    <Grid
+                        container style={{
                         padding: '20px 0',
                         backgroundColor: Color.light,
                         borderRadius: '50px 0',
-                        margin: '20px 0'
+                        margin: '5px 0'
                     }}>
-                        <Container>
+                        <Grid item justifyContent="center"
+                              alignItems="center" xs={12}>
+                            <EmailIcon sx={{color: Color.theme, fontSize: 50}}/>
+                        </Grid>
+                        <Grid item justifyContent="center"
+                              alignItems="center" xs={12}>
                             info@imrookaglobalgroup.com
-                        </Container>
-                        <EmailIcon sx={{color: Color.theme, fontSize: 50, marginRight: 10}}/>
-                    </Container>
-                    <Container style={{
-                        display: 'flex',
+                        </Grid>
+                    </Grid>
+                    <Grid
+                        container style={{
                         padding: '20px 0',
                         backgroundColor: Color.light,
                         borderRadius: '0 50px',
-                        margin: '20px 0'
+                        margin: '5px 0'
                     }}>
-                        <PhoneIcon sx={{color: Color.theme, fontSize: 50, marginLeft: 10}}/>
-                        <Container>
-                            <Typography style={{color: Color.black, fontSize: 23, fontFamily: 'Baskervville'}}> +65 93
+                        <Grid item justifyContent="center"
+                              alignItems="center" xs={12}>
+                            <PhoneIcon sx={{color: Color.theme, fontSize: 50}}/>
+                        </Grid>
+                        <Grid item justifyContent="center"
+                              alignItems="center" xs={12}>
+                            <Typography style={{color: Color.black, fontSize: 23}}> +65 93
                                 52 35 00</Typography>
-                            <Typography style={{color: Color.black, fontSize: 23, fontFamily: 'Baskervville'}}> +94 773
+                            <Typography style={{color: Color.black, fontSize: 23}}> +94 773
                                 631 343</Typography>
-                        </Container>
-                    </Container>
+                        </Grid>
+                    </Grid>
                 </Grid>
             </Grid>
             <iframe
