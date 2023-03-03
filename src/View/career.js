@@ -2,7 +2,8 @@ import * as React from 'react';
 import homeImage from "../img/careers/careerSlide.jpg";
 import career from "../img/careers/career.jpg";
 import {COLORS as Color} from "../Common/Constant/Color";
-import {Grid} from "@mui/material";
+import {Button, Grid} from "@mui/material";
+import OutlinedInput from "@mui/material/OutlinedInput";
 
 const Career = () => {
     return (
@@ -30,12 +31,67 @@ const Career = () => {
                   direction="row"
                   justifyContent="center"
                   alignItems="center" spacing={1} style={{marginTop: "20px"}}>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12}>
                     <h2 style={{color: Color.theme}}>VACANCIES</h2>
                     <h3 style={{color: 'black'}}>Thank you for your interest in working with us.</h3>
                     <h3 style={{color: 'black'}}>At the moment we do not have any job vacancies.</h3>
-                    <h3 style={{color: 'black'}}>We are happy to receive your blind application
-                        at <u>info@imrookaglobalgroup.com</u></h3>
+                    <h3 style={{color: 'black'}}>We are happy to receive your blind application.</h3>
+                </Grid>
+                <Grid item
+                      direction="column"
+                      justifyContent="center"
+                      alignItems="center"
+                      spacing={3} xs={10} md={5}>
+                    <h2 style={{color: Color.theme}}>APPLY NOW</h2>
+                    <OutlinedInput style={{
+                        backgroundColor: Color.light,
+                        width: '100%',
+                        borderRadius: 10,
+                        margin: '5px 0'
+                    }}
+                                   placeholder="First Name"/>
+                    <OutlinedInput style={{
+                        backgroundColor: Color.light,
+                        width: '100%',
+                        borderRadius: 10,
+                        margin: '5px 0'
+                    }}
+                                   placeholder="Surname"/>
+                    <div style={{width: '100%'}}>
+                        <OutlinedInput style={{
+                            backgroundColor: Color.light,
+                            width: '49%',
+                            borderRadius: 10,
+                            margin: '5px 5px 5px 0'
+                        }}
+                                       placeholder="Email"/>
+                        <OutlinedInput style={{
+                            backgroundColor: Color.light,
+                            width: '49%',
+                            borderRadius: 10,
+                            margin: '5px 0 5px 5px'
+                        }}
+                                       placeholder="Telephone"/>
+                    </div>
+                    <OutlinedInput style={{
+                        backgroundColor: Color.light,
+                        width: '100%',
+                        borderRadius: 10,
+                        margin: '5px 0'
+                    }}
+                                   placeholder="Subject"/>
+                    <OutlinedInput style={{
+                        backgroundColor: Color.light,
+                        width: '100%',
+                        borderRadius: 10,
+                        margin: '5px 0'
+                    }} multiline
+                                   rows={4}
+                                   placeholder="Message"/>
+                    <Button variant="contained" style={ButtonStyle} onClick={() => {
+                        // navigate('/about')
+                    }}
+                    >Send Now</Button>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <img style={{width: "90%"}} src={career} alt=""/>
@@ -45,5 +101,14 @@ const Career = () => {
         </div>
     )
 }
+const ButtonStyle = {
+    backgroundColor: Color.theme,
+    margin: '5px 0 20px 0',
+    color: Color.white,
+    fontFamily: 'Baskervville',
+    fontSize: 15,
+    padding: 15,
+    borderRadius: 100
+};
 
 export default Career;
