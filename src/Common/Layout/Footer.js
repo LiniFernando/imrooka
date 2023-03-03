@@ -18,12 +18,12 @@ const Footer = () => {
                 <Grid
                     container
                     direction="row"
-                    spacing={3}
+                    spacing={1}
                 >
                     <Grid container
                           direction="column"
                           justifyContent="center"
-                          alignItems="center" item xs={12} sm={3} style={{textAlign: 'left', width: '100%'}}>
+                          alignItems="center" item xs={12} sm={5} md={2} style={{textAlign: 'left', width: '100%'}}>
                         <img src={LOGO} style={{width: '80%'}} alt={'logo'}/>
 
                         <Grid container
@@ -43,7 +43,7 @@ const Footer = () => {
                             <YouTubeIcon sx={{color: Color.white, fontSize: 40, margin: '0 5px'}}/>
                         </Grid>
                     </Grid>
-                    <Grid item xs={12} sm={2} style={{textAlign: 'left'}}>
+                    <Grid item xs={12} sm={7} md={2} style={{textAlign: 'left'}}>
                         <h2 style={{color: Color.white}}>QUICK LINKS</h2>
                         <Container
                             style={{display: 'flex', flexDirection: 'column', color: Color.regular, fontSize: 20}}>
@@ -57,7 +57,7 @@ const Footer = () => {
                         </Container>
                     </Grid>
 
-                    <Grid item xs={12} sm={3} style={{textAlign: 'left'}}>
+                    <Grid item xs={12} sm={5} md={3} style={{textAlign: 'left'}}>
                         <h2 style={{color: Color.white}}>OUR SECTORS</h2>
                         <Container
                             style={{display: 'flex', flexDirection: 'column', color: Color.regular, fontSize: 20}}>
@@ -74,31 +74,36 @@ const Footer = () => {
                             {/*<Link href="" underline="none" color="inherit">Travel / Transport</Link>*/}
                         </Container>
                     </Grid>
-                    <Grid item xs={12} sm={4} style={{textAlign: 'left'}}>
-                        <Container style={{display: 'flex', padding: '20px 0'}}>
-                            <LocationOnIcon sx={{color: Color.white, fontSize: 50}}/>
-                            <Container>
-                                <Typography style={{color: Color.regular, fontSize: 20}}>No: 99/01, Parakandeniya,
-                                    Imbulgoda, Sri Lanka</Typography>
-                            </Container>
-                        </Container>
-                        <Container style={{display: 'flex', padding: '20px 0'}}>
-                            <EmailIcon sx={{color: Color.white, fontSize: 50}}/>
-                            <Container>
-                                <Typography
-                                    style={{
-                                        color: Color.regular,
-                                        fontSize: 20
-                                    }}> info@imrookaglobalgroup.com</Typography>
-                            </Container>
-                        </Container>
-                        <Container style={{display: 'flex', padding: '20px 0'}}>
-                            <PhoneIcon sx={{color: Color.white, fontSize: 50}}/>
-                            <Container>
+                    <Grid item xs={12} sm={7} md={5} style={{textAlign: 'left'}}>
+                        <Grid container
+                              direction="row" style={{padding: '20px 0'}}>
+                            <Grid item xs={12} sm={2}>
+                                <LocationOnIcon sx={{color: Color.white, fontSize: 50}}/>
+                            </Grid>
+                            <Grid item xs={12} sm={10} style={{color: Color.regular, fontSize: 20}}>No: 99/01,
+                                Parakandeniya,
+                                Imbulgoda, Sri Lanka</Grid>
+                        </Grid>
+                        <Grid container
+                              direction="row" style={{padding: '20px 0'}}>
+                            <Grid item xs={12} sm={2}>
+                                <EmailIcon sx={{color: Color.white, fontSize: 50}}/>
+                            </Grid>
+                            <Grid item xs={12} sm={10}
+                                  style={{color: Color.regular, fontSize: 20}}>info@imrookaglobalgroup.com
+                            </Grid>
+                        </Grid>
+                        <Grid container
+                              direction="row" style={{padding: '20px 0'}}>
+                            <Grid item xs={12} sm={2}>
+                                <PhoneIcon sx={{color: Color.white, fontSize: 50}}/>
+                            </Grid>
+                            <Grid item xs={12} sm={10}
+                                  style={{color: Color.regular, fontSize: 20}}>
                                 <Typography style={{color: Color.regular, fontSize: 20}}> +65 93 52 35 00</Typography>
                                 <Typography style={{color: Color.regular, fontSize: 20}}> +94 773 631 343</Typography>
-                            </Container>
-                        </Container>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>
