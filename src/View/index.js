@@ -1,5 +1,5 @@
 import * as React from 'react';
-import homeImage from "../img/home/Slider.png";
+import Carousel from 'better-react-carousel'
 import about from "../img/home/welcome tile.png";
 import brand1 from "../img/home/logo1.png";
 import brand2 from "../img/home/logo2.png";
@@ -16,7 +16,6 @@ import environment from "../img/home/environment&Farming.jpg";
 import ngo from "../img/home/ngo.jpg";
 import {Button, Grid, Container, Typography, Card, CardActionArea, CardMedia, CardContent} from "@mui/material";
 import {styled} from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import {COLORS as Color} from "../Common/Constant/Color";
 import {useNavigate} from "react-router-dom";
@@ -323,58 +322,113 @@ const Home = () => {
                         </AnimationOnScroll>
                     </Grid>
                     <AnimationOnScroll animateIn="animate__fadeIn" style={{width: '100%'}}>
-                        <Grid style={{alignItem: 'center'}} container spacing={1}>
-                            <Grid item xs={12}>
-                                <Box sx={{
-                                    justifyContent: 'center',
-                                    display: 'flex',
-                                    flexWrap: 'wrap',
-                                    minWidth: 300,
-                                    width: '100%'
-                                }}>
-                                    {sectors.map((image) => (
-                                        <ImageButton
-                                            focusRipple
-                                            key={image.title}
-                                            style={{
-                                                width: image.width, margin: 10
-                                            }}
-                                            onClick={() => {
-                                                window.scrollTo(0, 0);
-                                                navigate(`/sectors/${image.title}`)
-                                            }}
-                                        >
-                                            <ImageSrc style={{backgroundImage: `url(${image.url})`}}/>
-                                            <ImageBackdrop className="MuiImageBackdrop-root"/>
-                                            <Image>
-                                                <Typography
-                                                    component="span"
-                                                    variant="subtitle1"
-                                                    color="inherit"
-                                                    sx={{
-                                                        position: 'relative',
-                                                        p: 4,
-                                                        pt: 2,
-                                                        pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-                                                    }}
-                                                >
-                                                    {image.title}
-                                                    <ImageMarked className="MuiImageMarked-root"/>
-                                                </Typography>
-                                            </Image>
-                                        </ImageButton>
-                                    ))}
-                                </Box>
-                            </Grid>
+                        <Grid sx={{
+                            justifyContent: 'center',
+                            flexWrap: 'wrap',
+                        }} container spacing={1}>
+                            {sectors.map((image) => (
+                                <Grid item xs={12} sm={4}>
+                                    <ImageButton
+                                        focusRipple
+                                        key={image.title}
+                                        style={{
+                                            width: '100%',
+                                        }}
+                                        onClick={() => {
+                                            window.scrollTo(0, 0);
+                                            navigate(`/sectors/${image.title}`)
+                                        }}
+                                    >
+                                        <ImageSrc style={{backgroundImage: `url(${image.url})`}}/>
+                                        <ImageBackdrop className="MuiImageBackdrop-root"/>
+                                        <Image>
+                                            <Typography
+                                                component="span"
+                                                variant="subtitle1"
+                                                color="inherit"
+                                                sx={{
+                                                    position: 'relative',
+                                                    p: 4,
+                                                    pt: 2,
+                                                    pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                                                }}
+                                            >
+                                                {image.title}
+                                                <ImageMarked className="MuiImageMarked-root"/>
+                                            </Typography>
+                                        </Image>
+                                    </ImageButton>
+                                </Grid>
+                            ))}
                         </Grid>
                     </AnimationOnScroll>
-                    <img style={{width: "90%"}} src={sectors} alt=""/>
                 </Grid>
             </Grid>
             {/*end sectors*/}
 
-            {/*Start Brands*/}
+            {/*Start Companies*/}
             <Grid>
+                <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
+                    <Grid
+                        container
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={5}
+                    >
+                        <Grid item>
+                            <AnimationOnScroll animateIn="animate__fadeInLeft">
+                                <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
+                            </AnimationOnScroll>
+                            <AnimationOnScroll animateIn="animate__fadeInRight">
+                                <h2 style={{color: Color.theme}}>OUR COMPANIES</h2>
+                            </AnimationOnScroll>
+                        </Grid>
+                    </Grid>
+                    <AnimationOnScroll animateIn="animate__fadeIn" style={{width: '100%'}}>
+                        <Container style={{
+                            marginBottom: 10, width: '100%',
+                        }}>
+                            <Carousel cols={1} rows={1} gap={10} loop>
+                                <Carousel.Item>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justifyContent="center"
+                                        alignItems="center"
+                                        spacing={3}
+                                    >
+                                        {brands.map((image) => (
+                                            <Grid item xs={12} sm={2} key={image.url}>
+                                                <img style={{width: "100%"}} src={image.url} alt=""/>
+                                            </Grid>
+                                        ))}
+                                    </Grid>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justifyContent="center"
+                                        alignItems="center"
+                                        spacing={3}
+                                    >
+                                        {brands.map((image) => (
+                                            <Grid item xs={12} sm={2} key={image.url}>
+                                                <img style={{width: "100%"}} src={image.url} alt=""/>
+                                            </Grid>
+                                        ))}
+                                    </Grid>
+                                </Carousel.Item>
+                            </Carousel>
+                        </Container>
+                    </AnimationOnScroll>
+                </Grid>
+            </Grid>
+            {/*End Companies*/}
+
+            {/*Start Brands*/}
+            <Grid style={{backgroundColor: Color.light, paddingBottom: '20px', paddingTop: '20px',}}>
                 <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
                     <Grid
                         container
@@ -417,7 +471,7 @@ const Home = () => {
             {/*End Brands*/}
 
             {/*start news*/}
-            <Grid style={{backgroundColor: Color.light, paddingBottom: '20px', paddingTop: '20px',}}>
+            <Grid>
                 <Grid item
                       justifyContent="center"
                       alignItems="center"
@@ -429,17 +483,6 @@ const Home = () => {
                     <AnimationOnScroll animateIn="animate__fadeInRight">
                         <h2 style={{color: Color.theme}}>LATEST NEWS</h2>
                     </AnimationOnScroll>
-                    {/*<Grid
-                    container
-                    direction="column"
-                    justifyContent="center"
-                    alignItems="center"
-                    spacing={5}
-                >
-                    <Grid item>
-                        <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
-                        <h2 style={{color: Color.theme}}>LATEST NEWS</h2>
-                    </Grid>*/}
                     <AnimationOnScroll animateIn="animate__fadeIn">
                         <Grid style={{alignItem: 'center'}} container spacing={1}>
                             <Grid

@@ -151,38 +151,45 @@ const Sectors = () => {
                   alignItems="center" spacing={1} style={{margin: "20px 0", paddingBottom: 20}} xs={6}>
                 <h2 style={{color: Color.theme}}>OUR DIVERSITY</h2>
                 <h3 style={{color: 'black'}}>The World of Bee. A journey spanning over 100 years</h3>
-                {sectors.map((image) => (
-                    <ImageButton
-                        focusRipple
-                        key={image.title}
-                        style={{
-                            width: image.width, margin: 10,
-                        }}
-                        onClick={() => {
-                            window.scrollTo(0, 0);
-                            navigate(`/sectors/${image.title}`)
-                        }}
-                    >
-                        <ImageSrc style={{backgroundImage: `url(${image.url})`}}/>
-                        <ImageBackdrop className="MuiImageBackdrop-root"/>
-                        <Image>
-                            <Typography
-                                component="span"
-                                variant="subtitle1"
-                                color="inherit"
-                                sx={{
-                                    position: 'relative',
-                                    p: 4,
-                                    pt: 2,
-                                    pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                <Grid sx={{
+                    justifyContent: 'center',
+                    flexWrap: 'wrap',
+                }} container spacing={1}>
+                    {sectors.map((image) => (
+                        <Grid item xs={12} sm={4}>
+                            <ImageButton
+                                focusRipple
+                                key={image.title}
+                                style={{
+                                    width: '100%',
+                                }}
+                                onClick={() => {
+                                    window.scrollTo(0, 0);
+                                    navigate(`/sectors/${image.title}`)
                                 }}
                             >
-                                {image.title}
-                                <ImageMarked className="MuiImageMarked-root"/>
-                            </Typography>
-                        </Image>
-                    </ImageButton>
-                ))}
+                                <ImageSrc style={{backgroundImage: `url(${image.url})`}}/>
+                                <ImageBackdrop className="MuiImageBackdrop-root"/>
+                                <Image>
+                                    <Typography
+                                        component="span"
+                                        variant="subtitle1"
+                                        color="inherit"
+                                        sx={{
+                                            position: 'relative',
+                                            p: 4,
+                                            pt: 2,
+                                            pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                                        }}
+                                    >
+                                        {image.title}
+                                        <ImageMarked className="MuiImageMarked-root"/>
+                                    </Typography>
+                                </Image>
+                            </ImageButton>
+                        </Grid>
+                    ))}
+                </Grid>
             </Grid>
             {/*end sectors*/}
         </div>

@@ -12,6 +12,7 @@ import {COLORS as Color} from "../Common/Constant/Color";
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 import brand5 from "../img/home/logo5.jpg";
 import brand6 from "../img/home/logo6.jpg";
+import Carousel from 'better-react-carousel'
 
 const About = () => {
     const brands = [
@@ -293,20 +294,38 @@ const About = () => {
                         <Container style={{
                             marginTop: 20, marginBottom: 20, width: '100%',
                         }}>
-                            <Grid
-                                container
-                                direction="row"
-                                justifyContent="center"
-                                alignItems="center"
-                                spacing={3}
-                            >
-                                {brands.map((image) => (
-                                    <Grid item xs={12} sm={2}>
-                                        <img style={{width: "100%"}} src={image.url} alt=""/>
+                            <Carousel cols={1} rows={1} gap={10} loop>
+                                <Carousel.Item>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justifyContent="center"
+                                        alignItems="center"
+                                        spacing={3}
+                                    >
+                                        {brands.map((image) => (
+                                            <Grid item xs={12} sm={2} key={image.url}>
+                                                <img style={{width: "100%"}} src={image.url} alt=""/>
+                                            </Grid>
+                                        ))}
                                     </Grid>
-
-                                ))}
-                            </Grid>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justifyContent="center"
+                                        alignItems="center"
+                                        spacing={3}
+                                    >
+                                        {brands.map((image) => (
+                                            <Grid item xs={12} sm={2} key={image.url}>
+                                                <img style={{width: "100%"}} src={image.url} alt=""/>
+                                            </Grid>
+                                        ))}
+                                    </Grid>
+                                </Carousel.Item>
+                            </Carousel>
                         </Container>
                     </AnimationOnScroll>
                 </Grid>
