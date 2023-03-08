@@ -1,11 +1,16 @@
 import * as React from 'react';
 import homeImage from "../img/contact/contactSlide.jpg";
-import {Button, Grid, Typography} from "@mui/material";
+import {Button, Grid, Link, Typography} from "@mui/material";
 import OutlinedInput from '@mui/material/OutlinedInput';
 import {COLORS as Color} from "../Common/Constant/Color";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Contacts = () => {
     return (
@@ -158,6 +163,24 @@ const Contacts = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15839.086202234179!2d79.96851566618201!3d7.03611441489238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f91b752aa559%3A0x488ff29b094d8807!2sParakandeniya!5e0!3m2!1sen!2slk!4v1677677659704!5m2!1sen!2slk"
                 width="600" height="450" style={{border: 0, width: '100%'}} allowFullScreen="" loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <h2 style={{color: Color.theme}}>Connect with us</h2>
+            <p>We're always looking to connect with those who share an interest in a sustainable future.</p>
+            <Grid container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center" style={{width: '100%', marginTop: '20px'}}>
+                <LinkedInIcon sx={{color: Color.theme, fontSize: 40, margin: '0 10px'}}/>
+                <TwitterIcon sx={{color: Color.theme, fontSize: 40, margin: '0 10px'}}/>
+                <Link href="https://www.facebook.com/profile.php?id=100090551148484&is_tour_dismissed=true"
+                      underline="none" color="inherit">
+                    <FacebookIcon sx={{color: Color.theme, fontSize: 40, margin: '0 10px'}}/>
+                </Link>
+                <Link href="https://instagram.com/imrooka_global_group?igshid=YmMyMTA2M2Y=" underline="none"
+                      color="inherit">
+                    <InstagramIcon sx={{color: Color.theme, fontSize: 40, margin: '0 10px'}}/>
+                </Link>
+                <YouTubeIcon sx={{color: Color.theme, fontSize: 40, margin: '0 10px'}}/>
+            </Grid>
         </div>
     )
 }
