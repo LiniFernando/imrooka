@@ -7,6 +7,11 @@ import brand3 from "../img/home/logo3.png";
 import brand4 from "../img/home/logo4.jpg";
 import brand5 from "../img/home/logo5.jpg";
 import brand6 from "../img/home/logo6.jpg";
+import Homepage from "../img/home/Homepage.jpg";
+import slide2 from "../img/home/slide2.jpg";
+import slide3 from "../img/home/slide3.png";
+import slide4 from "../img/home/slide4.jpg";
+import slide5 from "../img/home/slide5.jpg";
 import Ayur from "../img/home/ayur&Beauty.jpg";
 import Tech from "../img/home/Technology.jpg";
 import apparel from "../img/home/apparel.jpg";
@@ -79,7 +84,33 @@ const Home = () => {
             width: '20%',
         },
     ];
-
+    const mainSliders = [
+        {
+            url: Homepage,
+            title: 'brand1',
+            width: '20%',
+        },
+        {
+            url: slide2,
+            title: 'brand2',
+            width: '20%',
+        },
+        {
+            url: slide3,
+            title: 'brand3',
+            width: '20%',
+        },
+        {
+            url: slide4,
+            title: 'brand4',
+            width: '20%',
+        },
+        {
+            url: slide5,
+            title: 'brand5',
+            width: '20%',
+        },
+    ];
     const sectors = [
         {
             url: Ayur,
@@ -218,8 +249,18 @@ const Home = () => {
             color: 'white', marginTop: '80px'
         }}>
             <div style={{backgroundColor: Color.theme}}>
-                <img style={{width: "100%", height: '500px', objectFit: 'cover', opacity: 0.5}}
-                     src={about} alt=""/>
+
+                <Carousel cols={1} rows={1} gap={0} loop>
+                    {mainSliders.map((image) => (
+                        <Carousel.Item style={{marginLeft: '0 !important'}}>
+
+                            <img style={{width: "100%", height: '500px', objectFit: 'cover', opacity: 0.5}}
+                                 src={image.url} alt=""/>
+                            {/*<img style={{width: "100%"}} src={image.url} alt=""/>*/}
+
+                        </Carousel.Item>
+                    ))}
+                </Carousel>
             </div>
             <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>70 Companies
                 7 Industry Sectors
@@ -231,7 +272,9 @@ const Home = () => {
                 left: 0,
                 right: 0,
                 top: 150,
-                textShadow: '0 7px 7px white'
+                textShadow: '0 7px 7px white',
+                textAlign: 'right',
+                marginRight: 45
             }}>70 Companies</h1>
             <h1 style={{
                 color: Color.black,
@@ -239,7 +282,9 @@ const Home = () => {
                 left: 0,
                 right: 0,
                 top: 220,
-                textShadow: '0 7px 7px white'
+                textShadow: '0 7px 7px white',
+                textAlign: 'right',
+                marginRight: 45
             }}>
                 7 Industry Sectors</h1>
             <h1 style={{
@@ -248,7 +293,9 @@ const Home = () => {
                 left: 0,
                 right: 0,
                 top: 290,
-                textShadow: '0 7px 7px white'
+                textShadow: '0 7px 7px white',
+                textAlign: 'right',
+                marginRight: 45
             }}>
                 Sri Lanka’s Premier</h1>
             <h1 style={{
@@ -257,7 +304,9 @@ const Home = () => {
                 left: 0,
                 right: 0,
                 top: 360,
-                textShadow: '0 7px 7px white'
+                textShadow: '0 7px 7px white',
+                textAlign: 'right',
+                marginRight: 45
             }}>
                 Diversified Company</h1>
             {/*<img style={{width: "100%"}} src={homeImage} alt=""/>*/}
