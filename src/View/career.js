@@ -9,6 +9,8 @@ import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 
 const Career = () => {
+    const [message, setMessage] = React.useState("");
+    const [subject, setSubject] = React.useState("");
     return (
         <div style={{
             backgroundColor: Color.white, fontSize: ' calc(10px + 2vmin)',
@@ -97,7 +99,9 @@ const Career = () => {
                         borderRadius: 10,
                         margin: '5px 0'
                     }}
-                                   placeholder="Subject"/>
+                                   placeholder="Subject"
+                                   value={subject}
+                                   onChange={(e) => setSubject(e.target.value)}/>
                     <OutlinedInput style={{
                         backgroundColor: Color.light,
                         width: '100%',
@@ -105,9 +109,11 @@ const Career = () => {
                         margin: '5px 0'
                     }} multiline
                                    rows={4}
-                                   placeholder="Message"/>
+                                   placeholder="Message"
+                                   value={message}
+                                   onChange={(e) => setMessage(e.target.value)}/>
                     <Button variant="contained" style={ButtonStyle} onClick={() => {
-                        // navigate('/about')
+                        window.location.href = `mailto:info@imrookaglobalgroup.com?subject=${subject}&body=${message}`;
                     }}
                     >Apply Now</Button>
                 </Grid>

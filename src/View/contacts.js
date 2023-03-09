@@ -11,8 +11,13 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+import './css/career.css';
 
 const Contacts = () => {
+    const [message, setMessage] = React.useState("");
+    const [subject, setSubject] = React.useState("");
     return (
         <div style={{
             backgroundColor: 'white', fontSize: ' calc(10px + 2vmin)',
@@ -67,29 +72,46 @@ const Contacts = () => {
                         margin: '5px 0'
                     }}
                                    placeholder="Organization"/>
-                    <div style={{width: '100%'}}>
-                        <OutlinedInput style={{
-                            backgroundColor: Color.light,
-                            width: '49%',
-                            borderRadius: 10,
-                            margin: '5px 5px 5px 0'
-                        }}
-                                       placeholder="Email"/>
-                        <OutlinedInput style={{
+                    {/*<div style={{width: '100%'}}>*/}
+                    <OutlinedInput style={{
+                        backgroundColor: Color.light,
+                        // width: '49%',
+                        width: '100%',
+                        borderRadius: 10,
+                        margin: '5px 0'
+                        // margin: '5px 5px 5px 0'
+                    }}
+                                   placeholder="Email"/>
+                    <PhoneInput style={{
+                        backgroundColor: Color.light,
+                        // width: '49%',
+                        width: '100%',
+                        height: 50,
+                        borderRadius: 10,
+                        margin: '5px 0'
+                        // margin: '5px 5px 5px 0'
+                    }}
+                                country={'lk'}
+                        // value={this.state.phone}
+                        // onChange={phone => this.setState({ phone })}
+                    />
+                    {/*<OutlinedInput style={{
                             backgroundColor: Color.light,
                             width: '49%',
                             borderRadius: 10,
                             margin: '5px 0 5px 5px'
                         }}
-                                       placeholder="Telephone"/>
-                    </div>
+                                       placeholder="Telephone"/>*/}
+                    {/*</div>*/}
                     <OutlinedInput style={{
                         backgroundColor: Color.light,
                         width: '100%',
                         borderRadius: 10,
                         margin: '5px 0'
                     }}
-                                   placeholder="Subject"/>
+                                   placeholder="Subject"
+                                   value={subject}
+                                   onChange={(e) => setSubject(e.target.value)}/>
                     <OutlinedInput style={{
                         backgroundColor: Color.light,
                         width: '100%',
@@ -97,11 +119,13 @@ const Contacts = () => {
                         margin: '5px 0'
                     }} multiline
                                    rows={4}
-                                   placeholder="Message"/>
+                                   placeholder="Message"
+                                   value={message}
+                                   onChange={(e) => setMessage(e.target.value)}/>
                     <Button variant="contained" style={ButtonStyle} onClick={() => {
-                        // navigate('/about')
+                        window.location.href = `mailto:info@imrookaglobalgroup.com?subject=${subject}&body=${message}`;
                     }}
-                    >Send Now</Button>
+                    >Contact Now</Button>
                 </Grid>
 
                 <Grid item justifyContent="center"
