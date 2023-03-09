@@ -284,7 +284,7 @@ const Home = () => {
                 textAlign: 'right',
                 marginRight: 45
             }}>
-               The Way For </h1>
+                The Way For </h1>
             <h1 style={{
                 color: Color.black,
                 position: 'absolute',
