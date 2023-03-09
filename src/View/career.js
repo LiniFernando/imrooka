@@ -1,9 +1,12 @@
 import * as React from 'react';
+import './css/career.css';
 import homeImage from "../img/careers/careerSlide.jpg";
 import career from "../img/careers/career.jpg";
 import {COLORS as Color} from "../Common/Constant/Color";
 import {Button, Grid} from "@mui/material";
 import OutlinedInput from "@mui/material/OutlinedInput";
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 const Career = () => {
     return (
@@ -57,22 +60,37 @@ const Career = () => {
                         margin: '5px 0'
                     }}
                                    placeholder="Surname"/>
-                    <div style={{width: '100%'}}>
-                        <OutlinedInput style={{
-                            backgroundColor: Color.light,
-                            width: '49%',
-                            borderRadius: 10,
-                            margin: '5px 5px 5px 0'
-                        }}
-                                       placeholder="Email"/>
-                        <OutlinedInput style={{
+                    {/*<div style={{width: '100%'}}>*/}
+                    <OutlinedInput style={{
+                        backgroundColor: Color.light,
+                        // width: '49%',
+                        width: '100%',
+                        borderRadius: 10,
+                        margin: '5px 0'
+                        // margin: '5px 5px 5px 0'
+                    }}
+                                   placeholder="Email"/>
+                    <PhoneInput style={{
+                        backgroundColor: Color.light,
+                        // width: '49%',
+                        width: '100%',
+                        height: 50,
+                        borderRadius: 10,
+                        margin: '5px 0'
+                        // margin: '5px 5px 5px 0'
+                    }}
+                                country={'lk'}
+                        // value={this.state.phone}
+                        // onChange={phone => this.setState({ phone })}
+                    />
+                    {/*<OutlinedInput style={{
                             backgroundColor: Color.light,
                             width: '49%',
                             borderRadius: 10,
                             margin: '5px 0 5px 5px'
                         }}
-                                       placeholder="Telephone"/>
-                    </div>
+                                       placeholder="Telephone"/>*/}
+                    {/*</div>*/}
                     <OutlinedInput style={{
                         backgroundColor: Color.light,
                         width: '100%',
@@ -110,5 +128,6 @@ const ButtonStyle = {
     padding: 15,
     borderRadius: 100
 };
+
 
 export default Career;
