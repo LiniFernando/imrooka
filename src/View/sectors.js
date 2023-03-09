@@ -112,6 +112,7 @@ const Sectors = () => {
         backgroundColor: theme.palette.common.black,
         opacity: 0.4,
         transition: theme.transitions.create('opacity'),
+        borderRadius: 25
     }));
 
     const ImageMarked = styled('span')(({theme}) => ({
@@ -130,8 +131,8 @@ const Sectors = () => {
             color: 'white', marginTop: '80px'
         }}>
 
-            <div style={{backgroundColor: Color.theme}}>
-                <img style={{width: "100%", height: '300px', objectFit: 'cover', opacity: 0.5}}
+            <div>
+                <img style={{width: "100%", height: '300px', objectFit: 'cover'}}
                      src={homeImage} alt=""/>
             </div>
             <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>The World of Bee. A
@@ -168,7 +169,7 @@ const Sectors = () => {
                                     navigate(`/sectors/${image.title}`)
                                 }}
                             >
-                                <ImageSrc style={{backgroundImage: `url(${image.url})`}}/>
+                                <ImageSrc style={{backgroundImage: `url(${image.url})`, borderRadius: 25}}/>
                                 <ImageBackdrop className="MuiImageBackdrop-root"/>
                                 <Image>
                                     <Typography
