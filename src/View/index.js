@@ -262,10 +262,8 @@ const Home = () => {
                     ))}
                 </Carousel>
             </div>
-            <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>70 Companies
-                7 Industry Sectors
-                Sri Lanka’s Premier
-                Diversified Company</h3>
+            <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>
+                Pioneering the way for sustainable and eco-friendly living.</h3>
             <h1 style={{
                 color: Color.black,
                 position: 'absolute',
@@ -275,7 +273,7 @@ const Home = () => {
                 textShadow: '0 7px 7px white',
                 textAlign: 'right',
                 marginRight: 45
-            }}>70 Companies</h1>
+            }}>Pioneering</h1>
             <h1 style={{
                 color: Color.black,
                 position: 'absolute',
@@ -286,7 +284,7 @@ const Home = () => {
                 textAlign: 'right',
                 marginRight: 45
             }}>
-                7 Industry Sectors</h1>
+               The Way For </h1>
             <h1 style={{
                 color: Color.black,
                 position: 'absolute',
@@ -297,7 +295,7 @@ const Home = () => {
                 textAlign: 'right',
                 marginRight: 45
             }}>
-                Sri Lanka’s Premier</h1>
+                Sustainable And</h1>
             <h1 style={{
                 color: Color.black,
                 position: 'absolute',
@@ -308,7 +306,7 @@ const Home = () => {
                 textAlign: 'right',
                 marginRight: 45
             }}>
-                Diversified Company</h1>
+                Eco-Friendly Living</h1>
             {/*<img style={{width: "100%"}} src={homeImage} alt=""/>*/}
             {/*start about*/}
             <AnimationOnScroll animateIn="animate__fadeInUp">
