@@ -91,7 +91,7 @@ const Career = () => {
                     <Button variant="contained" style={ButtonStyle} onClick={() => {
                         // navigate('/about')
                     }}
-                    >Send Now</Button>
+                    >Apply Now</Button>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <img style={{width: "90%"}} src={career} alt=""/>
