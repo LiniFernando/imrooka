@@ -231,6 +231,7 @@ const Home = () => {
         backgroundColor: theme.palette.common.black,
         opacity: 0.4,
         transition: theme.transitions.create('opacity'),
+        borderRadius: 25
     }));
 
     const ImageMarked = styled('span')(({theme}) => ({
@@ -248,13 +249,13 @@ const Home = () => {
             backgroundColor: Color.white, fontSize: ' calc(10px + 2vmin)',
             color: 'white', marginTop: '80px'
         }}>
-            <div style={{backgroundColor: Color.theme}}>
+            <div>
 
-                <Carousel cols={1} rows={1} gap={0} loop>
+                <Carousel cols={1} rows={1} gap={0} loop autoplay={5000} hideArrow>
                     {mainSliders.map((image) => (
                         <Carousel.Item style={{marginLeft: '0 !important'}}>
 
-                            <img style={{width: "100%", height: '500px', objectFit: 'cover', opacity: 0.5}}
+                            <img style={{width: "100%", height: '500px', objectFit: 'cover'}}
                                  src={image.url} alt=""/>
                             {/*<img style={{width: "100%"}} src={image.url} alt=""/>*/}
 
@@ -386,7 +387,7 @@ const Home = () => {
                                             navigate(`/sectors/${image.title}`)
                                         }}
                                     >
-                                        <ImageSrc style={{backgroundImage: `url(${image.url})`}}/>
+                                        <ImageSrc style={{backgroundImage: `url(${image.url})`, borderRadius: 25}}/>
                                         <ImageBackdrop className="MuiImageBackdrop-root"/>
                                         <Image>
                                             <Typography
@@ -436,7 +437,50 @@ const Home = () => {
                         <Container style={{
                             marginBottom: 10, width: '100%',
                         }}>
-                            <Carousel cols={1} rows={1} gap={10} loop>
+                            <Grid
+                                container
+                                direction="row"
+                                justifyContent="center"
+                                alignItems="center"
+                                spacing={3}
+                            >
+                                {brands.map((image) => (
+                                    <Grid item xs={12} sm={2} key={image.url}>
+                                        <img style={{width: "100%"}} src={image.url} alt=""/>
+                                    </Grid>
+
+                                ))}
+                            </Grid>
+                        </Container>
+                    </AnimationOnScroll>
+                </Grid>
+            </Grid>
+            {/*End Companies*/}
+
+            {/*Start Brands*/}
+            <Grid style={{backgroundColor: Color.light, paddingBottom: '20px', paddingTop: '20px',}}>
+                <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
+                    <Grid
+                        container
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={5}
+                    >
+                        <Grid item>
+                            <AnimationOnScroll animateIn="animate__fadeInLeft">
+                                <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
+                            </AnimationOnScroll>
+                            <AnimationOnScroll animateIn="animate__fadeInRight">
+                                <h2 style={{color: Color.theme}}>OUR BRANDS</h2>
+                            </AnimationOnScroll>
+                        </Grid>
+                    </Grid>
+                    <AnimationOnScroll animateIn="animate__fadeIn" style={{width: '100%'}}>
+                        <Container style={{
+                            marginBottom: 10, width: '100%',
+                        }}>
+                            <Carousel cols={1} rows={1} gap={10} loop autoplay={5000}>
                                 <Carousel.Item>
                                     <Grid
                                         container
@@ -468,49 +512,6 @@ const Home = () => {
                                     </Grid>
                                 </Carousel.Item>
                             </Carousel>
-                        </Container>
-                    </AnimationOnScroll>
-                </Grid>
-            </Grid>
-            {/*End Companies*/}
-
-            {/*Start Brands*/}
-            <Grid style={{backgroundColor: Color.light, paddingBottom: '20px', paddingTop: '20px',}}>
-                <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
-                    <Grid
-                        container
-                        direction="column"
-                        justifyContent="center"
-                        alignItems="center"
-                        spacing={5}
-                    >
-                        <Grid item>
-                            <AnimationOnScroll animateIn="animate__fadeInLeft">
-                                <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
-                            </AnimationOnScroll>
-                            <AnimationOnScroll animateIn="animate__fadeInRight">
-                                <h2 style={{color: Color.theme}}>OUR BRANDS</h2>
-                            </AnimationOnScroll>
-                        </Grid>
-                    </Grid>
-                    <AnimationOnScroll animateIn="animate__fadeIn" style={{width: '100%'}}>
-                        <Container style={{
-                            marginBottom: 10, width: '100%',
-                        }}>
-                            <Grid
-                                container
-                                direction="row"
-                                justifyContent="center"
-                                alignItems="center"
-                                spacing={3}
-                            >
-                                {brands.map((image) => (
-                                    <Grid item xs={12} sm={2} key={image.url}>
-                                        <img style={{width: "100%"}} src={image.url} alt=""/>
-                                    </Grid>
-
-                                ))}
-                            </Grid>
                         </Container>
                     </AnimationOnScroll>
                 </Grid>
