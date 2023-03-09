@@ -7,7 +7,7 @@ import brand1 from "../img/home/logo1.png";
 import brand2 from "../img/home/logo2.png";
 import brand3 from "../img/home/logo3.png";
 import brand4 from "../img/home/logo4.jpg";
-import {Grid, Container} from "@mui/material";
+import {Grid, Container, CardContent, Card} from "@mui/material";
 import {COLORS as Color} from "../Common/Constant/Color";
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 import brand5 from "../img/home/logo5.jpg";
@@ -104,8 +104,8 @@ const About = () => {
             backgroundColor: 'white', fontSize: ' calc(10px + 2vmin)',
             color: 'white', marginTop: '80px'
         }}>
-            <div style={{backgroundColor: Color.theme}}>
-                <img style={{width: "100%", height: '300px', objectFit: 'cover', opacity: 0.5}}
+            <div>
+                <img style={{width: "100%", height: '300px', objectFit: 'cover'}}
                      src={homeImage} alt=""/>
             </div>
             <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>The World of Bee. A
@@ -152,64 +152,118 @@ const About = () => {
 
                     <Grid item xs={12} sm={6} justifyContent="center"
                           alignItems="center">
-                        <div style={{textAlign: 'center'}}>
-                            <h2 style={{color: Color.theme}}>VISION</h2>
-                        </div>
-                        <div style={{
-                            backgroundImage: `url(${vision})`,
-                            backgroundPosition: 'center',
-                            // backgroundSize: 'cover',
-                            backgroundSize: '56%',
-                            backgroundRepeat: 'no-repeat',
-                        }}>
-                            <p style={{textAlign: 'center', color: 'black', paddingLeft: 20, paddingRight: 20}}>At SH,
-                                we
-                                strive to give our students the best experience in
-                                hospitality studies in the country, including Hospitality, Culinary Arts, Tourism
-                                Studies,
-                                and
-                                Event Management.</p>
-                            <p style={{textAlign: 'center', color: 'black', paddingLeft: 20, paddingRight: 20}}>
-                                More than being just a higher educational institute. We advocate the dedication and
-                                sincerity
-                                toward hospitality nurturing elites in the industry with comprehensive teaching
-                                strategies.</p>
-                            <p style={{textAlign: 'center', color: 'black', paddingLeft: 20, paddingRight: 20}}>
-                                More than being just a higher educational institute. We advocate the dedication and
-                                sincerity
-                                toward hospitality nurturing elites in the industry with comprehensive teaching
-                                strategies.</p>
-                        </div>
+                        <Card>
+                            <CardContent style={{fontFamily: 'Baskervville',}}>
+                                <div style={{textAlign: 'center'}}>
+                                    <h2 style={{color: Color.theme, fontSize: 36}}>VISION</h2>
+                                </div>
+                                <div style={{
+                                    backgroundImage: `url(${vision})`,
+                                    backgroundPosition: 'center',
+                                    // backgroundSize: 'cover',
+                                    backgroundSize: '56%',
+                                    backgroundRepeat: 'no-repeat',
+                                }}>
+                                    <p style={{
+                                        textAlign: 'center',
+                                        color: 'black',
+                                        paddingLeft: 20,
+                                        paddingRight: 20,
+                                        fontSize: 24
+                                    }}>At SH,
+                                        we
+                                        strive to give our students the best experience in
+                                        hospitality studies in the country, including Hospitality, Culinary Arts,
+                                        Tourism
+                                        Studies,
+                                        and
+                                        Event Management.</p>
+                                    <p style={{
+                                        textAlign: 'center',
+                                        color: 'black',
+                                        paddingLeft: 20,
+                                        paddingRight: 20,
+                                        fontSize: 24
+                                    }}>
+                                        More than being just a higher educational institute. We advocate the
+                                        dedication and
+                                        sincerity
+                                        toward hospitality nurturing elites in the industry with comprehensive
+                                        teaching
+                                        strategies.</p>
+                                    <p style={{
+                                        textAlign: 'center',
+                                        color: 'black',
+                                        paddingLeft: 20,
+                                        paddingRight: 20,
+                                        fontSize: 24
+                                    }}>
+                                        More than being just a higher educational institute. We advocate the
+                                        dedication and
+                                        sincerity
+                                        toward hospitality nurturing elites in the industry with comprehensive
+                                        teaching
+                                        strategies.</p>
+                                </div>
+                            </CardContent>
+                        </Card>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <div style={{textAlign: 'center'}}>
-                            <h2 style={{color: Color.theme}}>MISSION</h2>
-                        </div>
-                        <div style={{
-                            backgroundImage: `url(${mission})`,
-                            backgroundPosition: 'center',
-                            // backgroundSize: 'cover',
-                            backgroundSize: '56%',
-                            backgroundRepeat: 'no-repeat',
-                        }}>
-                            <p style={{textAlign: 'center', color: 'black', paddingLeft: 20, paddingRight: 20}}>At SH,
-                                we
-                                strive to give our students the best experience in
-                                hospitality studies in the country, including Hospitality, Culinary Arts, Tourism
-                                Studies,
-                                and
-                                Event Management.</p>
-                            <p style={{textAlign: 'center', color: 'black', paddingLeft: 20, paddingRight: 20}}>
-                                More than being just a higher educational institute. We advocate the dedication and
-                                sincerity
-                                toward hospitality nurturing elites in the industry with comprehensive teaching
-                                strategies.</p>
-                            <p style={{textAlign: 'center', color: 'black', paddingLeft: 20, paddingRight: 20}}>
-                                More than being just a higher educational institute. We advocate the dedication and
-                                sincerity
-                                toward hospitality nurturing elites in the industry with comprehensive teaching
-                                strategies.</p>
-                        </div>
+                        <Card>
+                            <CardContent style={{fontFamily: 'Baskervville',}}>
+                                <div style={{textAlign: 'center'}}>
+                                    <h2 style={{color: Color.theme, fontSize: 36}}>MISSION</h2>
+                                </div>
+                                <div style={{
+                                    backgroundImage: `url(${mission})`,
+                                    backgroundPosition: 'center',
+                                    // backgroundSize: 'cover',
+                                    backgroundSize: '56%',
+                                    backgroundRepeat: 'no-repeat',
+                                }}>
+                                    <p style={{
+                                        textAlign: 'center',
+                                        color: 'black',
+                                        paddingLeft: 20,
+                                        paddingRight: 20,
+                                        fontSize: 24
+                                    }}>At SH,
+                                        we
+                                        strive to give our students the best experience in
+                                        hospitality studies in the country, including Hospitality, Culinary Arts,
+                                        Tourism
+                                        Studies,
+                                        and
+                                        Event Management.</p>
+                                    <p style={{
+                                        textAlign: 'center',
+                                        color: 'black',
+                                        paddingLeft: 20,
+                                        paddingRight: 20,
+                                        fontSize: 24
+                                    }}>
+                                        More than being just a higher educational institute. We advocate the
+                                        dedication and
+                                        sincerity
+                                        toward hospitality nurturing elites in the industry with comprehensive
+                                        teaching
+                                        strategies.</p>
+                                    <p style={{
+                                        textAlign: 'center',
+                                        color: 'black',
+                                        paddingLeft: 20,
+                                        paddingRight: 20,
+                                        fontSize: 24
+                                    }}>
+                                        More than being just a higher educational institute. We advocate the
+                                        dedication and
+                                        sincerity
+                                        toward hospitality nurturing elites in the industry with comprehensive
+                                        teaching
+                                        strategies.</p>
+                                </div>
+                            </CardContent>
+                        </Card>
                     </Grid>
                 </Grid>
             </AnimationOnScroll>
@@ -294,6 +348,50 @@ const About = () => {
                         <Container style={{
                             marginTop: 20, marginBottom: 20, width: '100%',
                         }}>
+                            <Grid
+                                container
+                                direction="row"
+                                justifyContent="center"
+                                alignItems="center"
+                                spacing={3}
+                            >
+                                {brands.map((image) => (
+                                    <Grid item xs={12} sm={2}>
+                                        <img style={{width: "100%"}} src={image.url} alt=""/>
+                                    </Grid>
+
+                                ))}
+                            </Grid>
+                        </Container>
+                    </AnimationOnScroll>
+                </Grid>
+            </Grid>
+            {/*End companies*/}
+
+            {/*Start Brands*/}
+            <Grid container
+                  direction="row"
+                  justifyContent="center"
+                  alignItems="center" spacing={1}
+                  style={{backgroundColor: Color.light, paddingBottom: '20px', marginTop: '50px',}}>
+                <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
+                    <Grid
+                        container
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={5}
+                    >
+                        <AnimationOnScroll animateIn="animate__fadeInDown">
+                            <Grid item>
+                                <h2 style={{color: Color.theme}}>OUR BRANDS</h2>
+                            </Grid>
+                        </AnimationOnScroll>
+                    </Grid>
+                    <AnimationOnScroll animateIn="animate__fadeIn" style={{width: '100%'}}>
+                        <Container style={{
+                            marginTop: 20, marginBottom: 20, width: '100%',
+                        }}>
                             <Carousel cols={1} rows={1} gap={10} loop>
                                 <Carousel.Item>
                                     <Grid
@@ -326,50 +424,6 @@ const About = () => {
                                     </Grid>
                                 </Carousel.Item>
                             </Carousel>
-                        </Container>
-                    </AnimationOnScroll>
-                </Grid>
-            </Grid>
-            {/*End companies*/}
-
-            {/*Start Brands*/}
-            <Grid container
-                  direction="row"
-                  justifyContent="center"
-                  alignItems="center" spacing={1}
-                  style={{backgroundColor: Color.light, paddingBottom: '20px', marginTop: '50px',}}>
-                <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
-                    <Grid
-                        container
-                        direction="column"
-                        justifyContent="center"
-                        alignItems="center"
-                        spacing={5}
-                    >
-                        <AnimationOnScroll animateIn="animate__fadeInDown">
-                            <Grid item>
-                                <h2 style={{color: Color.theme}}>OUR BRANDS</h2>
-                            </Grid>
-                        </AnimationOnScroll>
-                    </Grid>
-                    <AnimationOnScroll animateIn="animate__fadeIn" style={{width: '100%'}}>
-                        <Container style={{
-                            marginTop: 20, marginBottom: 20, width: '100%',
-                        }}>
-                            <Grid
-                                container
-                                direction="row"
-                                justifyContent="center"
-                                alignItems="center"
-                                spacing={3}
-                            >
-                                {brands.map((image) => (
-                                    <Grid item xs={12} sm={2}>
-                                        <img style={{width: "100%"}} src={image.url} alt=""/>
-                                    </Grid>
-
-                                ))}
-                            </Grid>
                         </Container>
                     </AnimationOnScroll>
                 </Grid>
