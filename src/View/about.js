@@ -1,5 +1,7 @@
 import * as React from 'react';
+import './css/about.css';
 import homeImage from "../img/about/aboutSlide.jpg";
+import blackBackground from "../img/about/blackBackground.png";
 import vision from "../img/about/vision.png";
 import mission from "../img/about/mission.png";
 import boardMember from "../img/about/boardMember.jpg";
@@ -7,7 +9,7 @@ import brand1 from "../img/home/logo1.png";
 import brand2 from "../img/home/logo2.png";
 import brand3 from "../img/home/logo3.png";
 import brand4 from "../img/home/logo4.jpg";
-import {Grid, Container, CardContent, Card} from "@mui/material";
+import {Grid, Container} from "@mui/material";
 import {COLORS as Color} from "../Common/Constant/Color";
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 import brand5 from "../img/home/logo5.jpg";
@@ -118,7 +120,6 @@ const About = () => {
                 top: 150,
                 textShadow: '0 7px 7px white'
             }}>ABOUT US</h1>
-            {/*<img style={{width: "100%"}} src={oldhomeImage} alt=""/>*/}
             {/*start about*/}
             <Grid container
                   direction="row"
@@ -150,72 +151,57 @@ const About = () => {
             {/*end about*/}
 
             {/*start vision & mission*/}
-            <AnimationOnScroll animateIn="animate__fadeIn">
+            <AnimationOnScroll animateIn="animate__fadeIn"
+                               style={{marginTop: '100px',}}>
                 <Grid container
                       direction="row"
                       justifyContent="center"
-                      alignItems="center" spacing={1}
-                      style={{backgroundColor: Color.light, paddingBottom: '20px', marginTop: '50px',}}>
-
+                      alignItems="stretch"
+                      spacing={10}
+                      className={'cards'}
+                      style={{
+                          backgroundImage: `url(${blackBackground})`,
+                          backgroundPosition: 'center',
+                          backgroundSize: 'cover',
+                          backgroundRepeat: 'no-repeat',
+                      }}>
                     <Grid item xs={12} sm={6} justifyContent="center"
-                          alignItems="center">
-                        <Card>
-                            <CardContent style={{fontFamily: 'Baskervville',}}>
-                                <div style={{textAlign: 'center'}}>
-                                    <h2 style={{color: Color.theme, fontSize: 36}}>VISION</h2>
-                                </div>
-                                <div style={{
-                                    backgroundImage: `url(${vision})`,
-                                    backgroundPosition: 'center',
-                                    // backgroundSize: 'cover',
-                                    backgroundSize: '56%',
-                                    backgroundRepeat: 'no-repeat',
-                                }}>
-                                    <p style={{
-                                        textAlign: 'center',
-                                        color: 'black',
-                                        paddingLeft: 20,
-                                        paddingRight: 20,
-                                        fontSize: 24,
-                                        height: 285
-                                    }}>To be a global leader in promoting healthy, sustainable living practices that
-                                        empower individuals and contribute to a healthier planet.</p>
-                                </div>
-                            </CardContent>
-                        </Card>
+                          alignItems="center" className={'wrapper'}>
+                        <div className={'box'}>
+                            <h2>VISION</h2>
+                            <div style={{
+                                backgroundImage: `url(${vision})`,
+                                backgroundPosition: 'center',
+                                backgroundSize: '56%',
+                                backgroundRepeat: 'no-repeat',
+                            }}>
+                                <p>To be a global leader in promoting healthy, sustainable living practices that
+                                    empower individuals and contribute to a healthier planet.</p>
+                            </div>
+                        </div>
                     </Grid>
-                    <Grid item xs={12} sm={6}>
-                        <Card>
-                            <CardContent style={{fontFamily: 'Baskervville',}}>
-                                <div style={{textAlign: 'center'}}>
-                                    <h2 style={{color: Color.theme, fontSize: 36}}>MISSION</h2>
-                                </div>
-                                <div style={{
-                                    backgroundImage: `url(${mission})`,
-                                    backgroundPosition: 'center',
-                                    // backgroundSize: 'cover',
-                                    backgroundSize: '56%',
-                                    backgroundRepeat: 'no-repeat',
-                                }}>
-                                    <p style={{
-                                        textAlign: 'center',
-                                        color: 'black',
-                                        paddingLeft: 20,
-                                        paddingRight: 20,
-                                        fontSize: 24,
-                                        height: 285
-                                    }}>At Imrooka Global, our mission is to empower individuals to live healthier, more
-                                        sustainable lives by providing high-quality, natural products and services. We
-                                        strive to make a positive impact in the world through our commitment to
-                                        sustainability and social responsibility. Our team is dedicated to providing
-                                        excellent customer service and promoting overall well-being for all.</p>
-                                </div>
-                            </CardContent>
-                        </Card>
+                    <Grid item xs={12} sm={6} justifyContent="center"
+                          alignItems="center" className={'wrapper'}>
+                        <div className={'box'}>
+                            <h2>Mission</h2>
+                            <div style={{
+                                backgroundImage: `url(${mission})`,
+                                backgroundPosition: 'center',
+                                backgroundSize: '56%',
+                                backgroundRepeat: 'no-repeat',
+                            }}>
+                                <p>At Imrooka Global, our mission is to empower individuals to live healthier, more
+                                    sustainable lives by providing high-quality, natural products and services. We
+                                    strive to make a positive impact in the world through our commitment to
+                                    sustainability and social responsibility. Our team is dedicated to providing
+                                    excellent customer service and promoting overall well-being for all.</p>
+                            </div>
+                        </div>
                     </Grid>
                 </Grid>
             </AnimationOnScroll>
             {/*end vission & mission*/}
+
 
             {/*Start Directors' board*/}
             {/*<Grid>
