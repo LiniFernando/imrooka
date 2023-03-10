@@ -43,7 +43,7 @@ const Footer = () => {
                             <YouTubeIcon sx={{color: Color.white, fontSize: 40, margin: '0 5px'}}/>
                         </Grid>
                     </Grid>
-                    <Grid item xs={12} sm={7} md={2} style={{textAlign: 'left'}}>
+                    <Grid item xs={12} sm={7} md={2}>
                         <h2 style={{color: Color.white}}>QUICK LINKS</h2>
                         <Container
                             style={{
@@ -73,7 +73,7 @@ const Footer = () => {
                         </Container>
                     </Grid>
 
-                    <Grid item xs={12} sm={5} md={3} style={{textAlign: 'left'}}>
+                    <Grid item xs={12} sm={5} md={4}>
                         <h2 style={{color: Color.white}}>OUR SECTORS</h2>
                         <Container
                             style={{
@@ -108,16 +108,15 @@ const Footer = () => {
                             </i>
                         </Container>
                     </Grid>
-                    <Grid item xs={12} sm={7} md={5} style={{textAlign: 'left'}}>
+                    <Grid item xs={12} sm={7} md={4}>
                         <Grid container
                               direction="row" style={{padding: '20px 0'}}>
                             <Grid item xs={12} sm={2}>
                                 <LocationOnIcon sx={{color: Color.white, fontSize: 50}}/>
                             </Grid>
                             <Grid item xs={12} sm={10}
-                                  style={{color: Color.regular, fontSize: 20, fontFamily: 'Roboto'}}><i>No: 99/01,
-                                Parakandeniya,
-                                Imbulgoda, Sri Lanka</i></Grid>
+                                  style={{color: Color.regular, fontSize: 20, fontFamily: 'Roboto'}}><i>Colombo, Sri
+                                Lanka</i></Grid>
                         </Grid>
                         <Grid container
                               direction="row" style={{padding: '20px 0'}}>
