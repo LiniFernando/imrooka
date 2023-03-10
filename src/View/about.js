@@ -335,7 +335,7 @@ const About = () => {
                                         spacing={3}
                                     >
                                         {brands.map((image) => (
-                                            <Grid item xs={12} sm={2} key={image.url}>
+                                            <Grid item xs={6} sm={2} key={image.url}>
                                                 <img style={{width: "100%"}} src={image.url} alt=""/>
                                             </Grid>
                                         ))}
@@ -350,7 +350,7 @@ const About = () => {
                                         spacing={3}
                                     >
                                         {brands.map((image) => (
-                                            <Grid item xs={12} sm={2} key={image.url}>
+                                            <Grid item xs={6} sm={2} key={image.url}>
                                                 <img style={{width: "100%"}} src={image.url} alt=""/>
                                             </Grid>
                                         ))}
