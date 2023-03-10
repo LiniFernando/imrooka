@@ -24,8 +24,8 @@ const Contacts = () => {
             color: 'black', marginTop: '80px'
         }}>
 
-            <div style={{backgroundColor: Color.theme}}>
-                <img style={{width: "100%", height: '300px', objectFit: 'cover', opacity: 0.5}}
+            <div>
+                <img style={{width: "100%", height: '300px', objectFit: 'cover'}}
                      src={homeImage} alt=""/>
             </div>
             <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>Stay Connected With

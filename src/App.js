@@ -11,6 +11,7 @@ import News from "./View/news";
 
 import Sector from "./View/sector";
 import Career from "./View/career";
+import UnderConstruction from "./View/underConstruction";
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                     <Route path={"/investorRelations"} element={<InvestorRelations/>}/>
                     <Route path={"/news"} element={<News/>}/>
                     <Route path={"/contact"} element={<Contacts/>}/>
+                    <Route path={"/underConstruction"} element={<UnderConstruction/>}/>
                 </Routes>
                 <Footer/>
             </Router>

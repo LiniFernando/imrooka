@@ -400,7 +400,8 @@ const Home = () => {
                                         }}
                                         onClick={() => {
                                             window.scrollTo(0, 0);
-                                            navigate(`/sectors/${image.title}`)
+                                            navigate('/UnderConstruction');
+                                            // navigate(`/sectors/${image.title}`)
                                         }}
                                     >
                                         <ImageSrc style={{backgroundImage: `url(${image.url})`, borderRadius: 25}}/>
