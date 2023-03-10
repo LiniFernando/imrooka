@@ -374,6 +374,7 @@ const Home = () => {
                     justifyContent="center"
                     alignItems="center"
                     spacing={5}
+                    style={{overflow: "hidden"}}
                 >
                     <Grid item>
                         <AnimationOnScroll animateIn="animate__fadeInLeft">
@@ -539,7 +540,8 @@ const Home = () => {
                       justifyContent="center"
                       alignItems="center"
                     // spacing={1}
-                      xs={6}>
+                      xs={6}
+                      style={{overflow: "hidden"}}>
                     <AnimationOnScroll animateIn="animate__fadeInLeft">
                         <h3 style={{color: 'black'}}>"Empowering Healthy Living, Sustaining a Better Future"</h3>
                     </AnimationOnScroll>
