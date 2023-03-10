@@ -143,8 +143,7 @@ const Contacts = () => {
                         <Grid item justifyContent="center"
                               alignItems="center" xs={12}>
                             <i>
-                                No: 99/01, Parakandeniya,
-                                Imbulgoda, Sri Lanka
+                                Colombo, Sri Lanka
                             </i>
                         </Grid>
                     </Grid>
@@ -188,7 +187,7 @@ const Contacts = () => {
                 </Grid>
             </Grid>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15839.086202234179!2d79.96851566618201!3d7.03611441489238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f91b752aa559%3A0x488ff29b094d8807!2sParakandeniya!5e0!3m2!1sen!2slk!4v1677677659704!5m2!1sen!2slk"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126743.58585962832!2d79.78616421291657!3d6.9220039467265995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo!5e0!3m2!1sen!2slk!4v1678461927353!5m2!1sen!2slk"
                 width="600" height="450" style={{border: 0, width: '100%'}} allowFullScreen="" loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"></iframe>
             <h2 style={{color: Color.theme}}>Connect with us</h2>
