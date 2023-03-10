@@ -128,7 +128,7 @@ const Contacts = () => {
                     >Contact Now</Button>
                 </Grid>
 
-                <Grid item justifyContent="center"
+                <Grid item justifyContent="center" style={{fontFamily: 'Roboto'}}
                       alignItems="center" xs={10} md={5} spacing={3}>
                     <Grid
                         container style={{
@@ -142,8 +142,10 @@ const Contacts = () => {
                         </Grid>
                         <Grid item justifyContent="center"
                               alignItems="center" xs={12}>
-                            No: 99/01, Parakandeniya,
-                            Imbulgoda, Sri Lanka
+                            <i>
+                                No: 99/01, Parakandeniya,
+                                Imbulgoda, Sri Lanka
+                            </i>
                         </Grid>
                     </Grid>
                     <Grid
@@ -159,7 +161,9 @@ const Contacts = () => {
                         </Grid>
                         <Grid item justifyContent="center"
                               alignItems="center" xs={12}>
-                            info@imrookaglobalgroup.com
+                            <i>
+                                info@imrookaglobalgroup.com
+                            </i>
                         </Grid>
                     </Grid>
                     <Grid
@@ -175,10 +179,10 @@ const Contacts = () => {
                         </Grid>
                         <Grid item justifyContent="center"
                               alignItems="center" xs={12}>
-                            <Typography style={{color: Color.black, fontSize: 23}}> +65 93
-                                52 35 00</Typography>
-                            <Typography style={{color: Color.black, fontSize: 23}}> +94 773
-                                631 343</Typography>
+                            <Typography style={{color: Color.black, fontSize: 23}}><i> +65 93
+                                52 35 00</i></Typography>
+                            <Typography style={{color: Color.black, fontSize: 23}}> <i>+94 773
+                                631 343</i></Typography>
                         </Grid>
                     </Grid>
                 </Grid>
