@@ -5,40 +5,57 @@ import {COLORS as Color} from "../Common/Constant/Color";
 import Tech from "../img/home/Technology.jpg";
 import products from "../img/home/products.jpeg";
 import environment from "../img/home/environment&Farming.jpg";
-import ngo from "../img/home/ngo.jpg";
 import {styled} from "@mui/material/styles";
 import ButtonBase from "@mui/material/ButtonBase";
 import Ayur from "../img/home/ayur&Beauty.jpg";
 import {useNavigate} from "react-router-dom";
+import ayurvedicProducts from "../img/sectors/ayurvedicProducts.jpg";
+import Centres from "../img/sectors/Centres.jpg";
+import MedicalServices from "../img/sectors/MedicalServices.jpg";
 
 const Sectors = () => {
     const sectors = [
         {
-            url: Ayur,
-            title: 'Ayurvedic & Beauty',
+            url: environment,
+            title: 'Organic Agricultural Products',
+            width: '30%',
+        },
+        {
+            url: ayurvedicProducts,
+            title: 'Ayurvedic Medicinal Products & Treatment',
+            width: '30%',
+        },
+        {
+            url: Centres,
+            title: 'Centres',
+            width: '30%',
+        },
+        {
+            url: MedicalServices,
+            title: 'Medical Services',
             width: '30%',
         },
         {
             url: products,
-            title: 'Products',
+            title: 'Cosmetics',
             width: '30%',
         },
         {
             url: Tech,
-            title: 'Technology & Research',
+            title: 'IT Solutions',
             width: '30%',
         },
         {
-            url: environment,
-            title: 'Environment & Farming',
+            url: Ayur,
+            title: 'Beauty & Wellness Centres',
             width: '30%',
         },
-        {
+        /*{
             url: ngo,
             title: 'NGO',
             width: '30%',
         },
-        /*{
+        {
             url: apparel,
             title: 'Apparel',
             width: '30%',

@@ -124,8 +124,8 @@ const About = () => {
             <Grid container
                   direction="row"
                   justifyContent="center"
-                  alignItems="center" spacing={1} style={{marginTop: "20px"}}>
-                <Grid item xs={6}>
+                  alignItems="center" spacing={1} style={{marginTop: "20px", padding: "0 15% 0 15%"}}>
+                <Grid item>
                     <div style={{textAlign: 'center'}}>
                         <h2 style={{color: Color.theme}}>OUR STORY</h2>
                     </div>
@@ -290,10 +290,9 @@ const About = () => {
                                 spacing={3}
                             >
                                 {brands.map((image) => (
-                                    <Grid item xs={12} sm={2}>
+                                    <Grid item xs={6} sm={2}>
                                         <img style={{width: "100%"}} src={image.url} alt=""/>
                                     </Grid>
-
                                 ))}
                             </Grid>
                         </Container>

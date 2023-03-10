@@ -18,7 +18,9 @@ import apparel from "../img/home/apparel.jpg";
 import clinic from "../img/home/clinicSalon.jpg";
 import products from "../img/home/products.jpeg";
 import environment from "../img/home/environment&Farming.jpg";
-import ngo from "../img/home/ngo.jpg";
+import ayurvedicProducts from "../img/sectors/ayurvedicProducts.jpg";
+import Centres from "../img/sectors/Centres.jpg";
+import MedicalServices from "../img/sectors/MedicalServices.jpg";
 import {Button, Grid, Container, Typography, Card, CardActionArea, CardMedia, CardContent} from "@mui/material";
 import {styled} from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
@@ -113,31 +115,46 @@ const Home = () => {
     ];
     const sectors = [
         {
-            url: Ayur,
-            title: 'Ayurvedic & Beauty',
+            url: environment,
+            title: 'Organic Agricultural Products',
+            width: '30%',
+        },
+        {
+            url: ayurvedicProducts,
+            title: 'Ayurvedic Medicinal Products & Treatment',
+            width: '30%',
+        },
+        {
+            url: Centres,
+            title: 'Centres',
+            width: '30%',
+        },
+        {
+            url: MedicalServices,
+            title: 'Medical Services',
             width: '30%',
         },
         {
             url: products,
-            title: 'Products',
+            title: 'Cosmetics',
             width: '30%',
         },
         {
             url: Tech,
-            title: 'Technology & Research',
+            title: 'IT Solutions',
             width: '30%',
         },
         {
-            url: environment,
-            title: 'Environment & Farming',
+            url: Ayur,
+            title: 'Beauty & Wellness Centres',
             width: '30%',
         },
-        {
+        /*{
             url: ngo,
             title: 'NGO',
             width: '30%',
         },
-        /*{
+        {
             url: apparel,
             title: 'Apparel',
             width: '30%',
@@ -370,6 +387,7 @@ const Home = () => {
                         <Grid sx={{
                             justifyContent: 'center',
                             flexWrap: 'wrap',
+                            paddingLeft: 6
                         }} container spacing={1}>
                             {sectors.map((image) => (
                                 <Grid item xs={12} sm={4}>
