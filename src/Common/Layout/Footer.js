@@ -84,28 +84,36 @@ const Footer = () => {
                                 fontFamily: 'Roboto'
                             }}>
                             <i>
-                                <Link href="/sectors/Ayurvedic & Beauty" underline="none" color="inherit">Ayurvedic &
-                                    Beauty</Link>
+                                <Link href="/sectors/Organic Agricultural Products" underline="none" color="inherit">Organic
+                                    Agricultural Products</Link>
                             </i>
                             <i>
-                                <Link href="/sectors/Products" underline="none" color="inherit">Products</Link>
+                                <Link href="/sectors/Ayurvedic Medicinal Products & Treatment Centres" underline="none"
+                                      color="inherit">Ayurvedic Medicinal Products & Treatment Centres</Link>
                             </i>
                             <i>
-                                <Link href="/sectors/Technology & Research" underline="none" color="inherit">Technology
-                                    &
-                                    Research</Link>
+                                <Link href="/sectors/Medical Services" underline="none" color="inherit">Medical
+                                    Services</Link>
                             </i>
                             <i>
-                                <Link href="/sectors/Environment & Farming" underline="none" color="inherit">Environment
-                                    &
-                                    Farming</Link>
+                                <Link href="/sectors/Cosmetics" underline="none" color="inherit">Cosmetics</Link>
                             </i>
                             <i>
-                                <Link href="/sectors/NGO" underline="none" color="inherit">NGO</Link>
-                                {/*<Link href="" underline="none" color="inherit">Education</Link>*/}
-                                {/*<Link href="" underline="none" color="inherit">Apparel</Link>*/}
-                                {/*<Link href="" underline="none" color="inherit">Travel / Transport</Link>*/}
+                                <Link href="/sectors/IT Solutions" underline="none" color="inherit">IT Solutions</Link>
                             </i>
+                            <i>
+                                <Link href="/sectors/Marketing Solutions" underline="none" color="inherit">Marketing
+                                    Solutions</Link>
+                            </i>
+                            <i>
+                                <Link href="/sectors/Beauty & Wellness Centres" underline="none" color="inherit">Beauty
+                                    & Wellness Centres</Link>
+                            </i>
+                            {/*<Link href="/sectors/NGO" underline="none" color="inherit">NGO</Link>*/}
+                            {/*<Link href="" underline="none" color="inherit">Education</Link>*/}
+                            {/*<Link href="" underline="none" color="inherit">Apparel</Link>*/}
+                            {/*<Link href="" underline="none" color="inherit">Travel / Transport</Link>*/}
+
                         </Container>
                     </Grid>
                     <Grid item xs={12} sm={7} md={4}>

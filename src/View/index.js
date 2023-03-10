@@ -19,7 +19,7 @@ import clinic from "../img/home/clinicSalon.jpg";
 import products from "../img/home/products.jpeg";
 import environment from "../img/home/environment&Farming.jpg";
 import ayurvedicProducts from "../img/sectors/ayurvedicProducts.jpg";
-import Centres from "../img/sectors/Centres.jpg";
+import Marketing from "../img/sectors/marketing.jpg";
 import MedicalServices from "../img/sectors/MedicalServices.jpg";
 import {Button, Grid, Container, Typography, Card, CardActionArea, CardMedia, CardContent} from "@mui/material";
 import {styled} from '@mui/material/styles';
@@ -121,12 +121,7 @@ const Home = () => {
         },
         {
             url: ayurvedicProducts,
-            title: 'Ayurvedic Medicinal Products & Treatment',
-            width: '30%',
-        },
-        {
-            url: Centres,
-            title: 'Centres',
+            title: 'Ayurvedic Medicinal Products & Treatment Centres',
             width: '30%',
         },
         {
@@ -142,6 +137,11 @@ const Home = () => {
         {
             url: Tech,
             title: 'IT Solutions',
+            width: '30%',
+        },
+        {
+            url: Marketing,
+            title: 'Marketing Solutions',
             width: '30%',
         },
         {

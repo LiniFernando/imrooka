@@ -10,8 +10,8 @@ import ButtonBase from "@mui/material/ButtonBase";
 import Ayur from "../img/home/ayur&Beauty.jpg";
 import {useNavigate} from "react-router-dom";
 import ayurvedicProducts from "../img/sectors/ayurvedicProducts.jpg";
-import Centres from "../img/sectors/Centres.jpg";
 import MedicalServices from "../img/sectors/MedicalServices.jpg";
+import Marketing from "../img/sectors/marketing.jpg";
 
 const Sectors = () => {
     const sectors = [
@@ -22,12 +22,7 @@ const Sectors = () => {
         },
         {
             url: ayurvedicProducts,
-            title: 'Ayurvedic Medicinal Products & Treatment',
-            width: '30%',
-        },
-        {
-            url: Centres,
-            title: 'Centres',
+            title: 'Ayurvedic Medicinal Products & Treatment Centres',
             width: '30%',
         },
         {
@@ -43,6 +38,11 @@ const Sectors = () => {
         {
             url: Tech,
             title: 'IT Solutions',
+            width: '30%',
+        },
+        {
+            url: Marketing,
+            title: 'Marketing Solutions',
             width: '30%',
         },
         {

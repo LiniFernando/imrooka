@@ -1,6 +1,5 @@
 import * as React from 'react';
 import homeImage from "../img/sectors/slide.png";
-import services from "../img/sectors/services.png";
 import director from "../img/about/boardMember.jpg";
 import {Card, CardActionArea, CardContent, CardMedia, Container, Grid} from "@mui/material";
 import {COLORS as Color} from "../Common/Constant/Color";
@@ -13,7 +12,6 @@ import environment from "../img/home/environment&Farming.jpg";
 import {useParams} from "react-router-dom";
 import {useEffect} from "react";
 import about from "../img/home/welcome tile.png";
-import {AnimationOnScroll} from "react-animation-on-scroll";
 import brand1 from "../img/home/logo1.png";
 import brand2 from "../img/home/logo2.png";
 import brand3 from "../img/home/logo3.png";
@@ -21,8 +19,8 @@ import brand4 from "../img/home/logo4.jpg";
 import brand5 from "../img/home/logo5.jpg";
 import brand6 from "../img/home/logo6.jpg";
 import ayurvedicProducts from "../img/sectors/ayurvedicProducts.jpg";
-import Centres from "../img/sectors/Centres.jpg";
 import MedicalServices from "../img/sectors/MedicalServices.jpg";
+import Marketing from "../img/sectors/marketing.jpg";
 
 const Sector = () => {
     let {name} = useParams();
@@ -40,20 +38,12 @@ const Sector = () => {
                     "(Same Template as the above service)\n" +
                     "Discover natural healing with Imrooka Global.");
                 break;
-            case 'Ayurvedic Medicinal Products & Treatment':
+            case 'Ayurvedic Medicinal Products & Treatment Centres':
                 setHomeImg(ayurvedicProducts);
                 setParagraph("Welcome to Imrooka Global's Ayurvedic Medicinal Products and Treatment Centres, where ancient Ayurvedic wisdom meets modern medicine. Our journey began in 2011 with a humble Ayurvedic medicinal clinic, and since then, we've expanded our services to heal countless patients with our natural remedies and treatments.\n" +
                     "At Imrooka Global, we believe that healing should be holistic and natural, which is why we offer a wide range of Ayurvedic medicinal products and treatments that are safe, effective, and sustainable. Our products and treatments are derived from natural ingredients, with no synthetic chemicals or harmful preservatives, ensuring that you receive the best of what nature has to offer.\n" +
                     "Whether you're looking for treatments to improve your physical health, mental wellbeing, or spiritual balance, we have a range of options to suit your needs. Our experienced practitioners and therapists are dedicated to providing personalized care and attention to every patient, ensuring that you receive the best possible care.\n" +
                     "Explore our Ayurvedic Medicinal Products and Treatment Centres today and discover a path towards natural healing and wellness.");
-                break;
-            case 'Centres':
-                setHomeImg(Centres);
-                setParagraph("Welcome to Imrooka Global's Beauty and Wellness Centres page, where we are committed to helping you achieve your health and beauty goals. Our luxurious spas and resorts are designed to provide you with an unforgettable experience of rejuvenation and relaxation.\n" +
-                    "At Imrooka Global, we believe that beauty comes from within. That's why our holistic approach to wellness combines the best of modern and traditional practices to promote overall well-being. Whether you're looking for a pampering spa day or a transformative wellness retreat, we have something to offer.\n" +
-                    "Our beauty and wellness services include massages, facials, body treatments, yoga, meditation, Ayurvedic treatments, and more. Our highly trained and experienced staff use only the highest quality products to ensure that you receive the best possible care and attention.\n" +
-                    "In addition to our services, we offer a range of amenities to enhance your experience, including swimming pools, saunas, hot tubs, and fitness centers. Our goal is to provide you with an all-encompassing experience that nourishes your body, mind, and spirit.\n" +
-                    "Experience the ultimate in beauty and wellness at Imrooka Global's spas and resorts. Contact us today to schedule your appointment and start your journey toward a healthier, happier you!");
                 break;
             case 'Medical Services':
                 setHomeImg(MedicalServices);
@@ -78,6 +68,14 @@ const Sector = () => {
                     "Whether you need software development, cybersecurity, cloud computing, IT consulting, or other IT services, Imrooka Global has the expertise and experience to help you. We have a team of highly skilled IT professionals who are dedicated to providing you with the highest quality services that are tailored to your specific needs.\n" +
                     "At Imrooka Global, we understand that technology is constantly evolving, and we make it our mission to stay ahead of the curve. We use the latest tools, technologies, and best practices to ensure that our clients receive the most innovative and reliable IT solutions possible.\n" +
                     "Contact us today to learn more about how our subsidiaries Lyxux, Avacdro, and Fedoax can help you achieve your IT goals. We look forward to working with you!");
+                break;
+            case 'Marketing Solutions':
+                setHomeImg(Marketing);
+                setParagraph("We understand that in today's world, effective marketing is key to growing any business. That's why we offer a wide range of marketing solutions tailored to meet your specific needs.\n" +
+                    "Our team of experts specializes in crafting creative and innovative marketing strategies to help your business stand out in a crowded marketplace. Whether you're looking to build your brand, increase your online presence, or drive more traffic to your website, we have the tools and expertise to make it happen.\n" +
+                    "Our marketing services include search engine optimization (SEO), pay-per-click advertising (PPC), social media marketing, email marketing, and content marketing. We take a data-driven approach to every campaign, analyzing key metrics and making data-backed decisions to optimize your results.\n" +
+                    "At Imrooka Global, we believe in transparency and accountability. That's why we provide regular reports and updates on your campaign's performance, so you can track your progress and see the impact of our work firsthand.\n" +
+                    "We take pride in our ability to deliver high-quality marketing solutions that drive results. Let us help you take your business to the next level with our comprehensive marketing services. Contact us today to learn more!");
                 break;
             case 'Beauty & Wellness Centres':
                 setHomeImg(Ayur);
