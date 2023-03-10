@@ -264,7 +264,7 @@ const Home = () => {
                 </Carousel>
             </div>
             <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>
-                Pioneering the way for sustainable and eco-friendly living.</h3>
+                Empowering Sustainable & Healthy Living with Imrooka Global</h3>
             <h1 style={{
                 color: Color.black,
                 position: 'absolute',
@@ -274,7 +274,7 @@ const Home = () => {
                 textShadow: '0 7px 7px white',
                 textAlign: 'right',
                 marginRight: 45
-            }}>Pioneering</h1>
+            }}>Discover</h1>
             <h1 style={{
                 color: Color.black,
                 position: 'absolute',
@@ -285,7 +285,7 @@ const Home = () => {
                 textAlign: 'right',
                 marginRight: 45
             }}>
-                The Way For </h1>
+                the Future with </h1>
             <h1 style={{
                 color: Color.black,
                 position: 'absolute',
@@ -296,7 +296,7 @@ const Home = () => {
                 textAlign: 'right',
                 marginRight: 45
             }}>
-                Sustainable And</h1>
+                Sri Lanka's Premier </h1>
             <h1 style={{
                 color: Color.black,
                 position: 'absolute',
@@ -307,7 +307,7 @@ const Home = () => {
                 textAlign: 'right',
                 marginRight: 45
             }}>
-                Eco-Friendly Living</h1>
+                Diversified Company</h1>
             {/*<img style={{width: "100%"}} src={homeImage} alt=""/>*/}
             {/*start about*/}
             <AnimationOnScroll animateIn="animate__fadeInUp">
@@ -322,23 +322,20 @@ const Home = () => {
 
                             <h2 style={{color: Color.theme}}>IMROOKA GLOBAL GROUP</h2>
                         </div>
-                        <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>At SH,
-                            we
-                            strive to give our students the best
-                            experience in
-                            hospitality studies in the country, including Hospitality, Culinary Arts, Tourism Studies,
-                            and
-                            Event Management.</p>
                         <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>
-                            More than being just a higher educational institute. We advocate the dedication and
-                            sincerity
-                            toward hospitality nurturing elites in the industry with comprehensive teaching
-                            strategies.</p>
+                            We are dedicated to empowering healthy and eco-friendly living! As a diversified
+                            organization, we offer a variety of services, including organic agricultural products,
+                            ayurvedic medicinal products and treatments, medical services, and cosmetics.
+
+                        </p>
                         <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>
-                            More than being just a higher educational institute. We advocate the dedication and
-                            sincerity
-                            toward hospitality nurturing elites in the industry with comprehensive teaching
-                            strategies.</p>
+                            We also have a non-profit organization committed to improving the welfare of children in
+                            need.</p>
+                        <p style={{textAlign: 'center', color: Color.black, paddingLeft: 20, paddingRight: 20}}>
+                            With our modern IT and marketing solutions, we strive to make a positive impact on the
+                            world. Our mission is to inspire individuals and communities to live sustainably and thrive.
+                            We invite you to explore our website to learn more about our services and how we can help
+                            you achieve</p>
                         <Button variant="contained" style={ButtonStyle} onClick={() => {
                             window.scrollTo(0, 0);
                             navigate('/about')
@@ -363,7 +360,7 @@ const Home = () => {
                 >
                     <Grid item>
                         <AnimationOnScroll animateIn="animate__fadeInLeft">
-                            <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
+                            <h3 style={{color: 'black'}}>Discover the Benefits of Our Diversified Services</h3>
                         </AnimationOnScroll>
                         <AnimationOnScroll animateIn="animate__fadeInRight">
                             <h2 style={{color: Color.theme}}>BUSINESS SECTORS</h2>
@@ -426,10 +423,10 @@ const Home = () => {
                     >
                         <Grid item>
                             <AnimationOnScroll animateIn="animate__fadeInLeft">
-                                <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
+                                <h3 style={{color: 'black'}}>Together, we are making a difference</h3>
                             </AnimationOnScroll>
                             <AnimationOnScroll animateIn="animate__fadeInRight">
-                                <h2 style={{color: Color.theme}}>OUR COMPANIES</h2>
+                                <h2 style={{color: Color.theme}}>OUR ENTITIES</h2>
                             </AnimationOnScroll>
                         </Grid>
                     </Grid>
@@ -480,7 +477,7 @@ const Home = () => {
                         <Container style={{
                             marginBottom: 10, width: '100%',
                         }}>
-                            <Carousel cols={1} rows={1} gap={10} loop autoplay={5000}>
+                            <Carousel cols={1} rows={1} gap={10} loop hideArrow autoplay={5000}>
                                 <Carousel.Item>
                                     <Grid
                                         container
@@ -526,7 +523,7 @@ const Home = () => {
                     // spacing={1}
                       xs={6}>
                     <AnimationOnScroll animateIn="animate__fadeInLeft">
-                        <h3 style={{color: 'black'}}>LOREM IPSUM DOLOR SIT</h3>
+                        <h3 style={{color: 'black'}}>"Empowering Healthy Living, Sustaining a Better Future"</h3>
                     </AnimationOnScroll>
                     <AnimationOnScroll animateIn="animate__fadeInRight">
                         <h2 style={{color: Color.theme}}>LATEST NEWS</h2>

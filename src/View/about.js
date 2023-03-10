@@ -108,8 +108,8 @@ const About = () => {
                 <img style={{width: "100%", height: '300px', objectFit: 'cover'}}
                      src={homeImage} alt=""/>
             </div>
-            <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>The World of Bee. A
-                journey spanning over 100 years</h3>
+            <h3 style={{color: Color.white, position: 'absolute', left: 0, right: 0, top: 100}}>Transforming Lives,
+                Empowering Wellness</h3>
             <h1 style={{
                 color: Color.black,
                 position: 'absolute',
@@ -128,16 +128,23 @@ const About = () => {
                     <div style={{textAlign: 'center'}}>
                         <h2 style={{color: Color.theme}}>OUR STORY</h2>
                     </div>
-                    <p style={{textAlign: 'center', color: 'black'}}>At SH, we strive to give our students the best
-                        experience in
-                        hospitality studies in the country, including Hospitality, Culinary Arts, Tourism Studies, and
-                        Event Management.</p>
+                    <p style={{textAlign: 'center', color: 'black'}}>At Imrooka Global, we are committed to empowering
+                        healthy, eco-friendly living. As a diversified organization, we offer a range of services that
+                        cater to various health and wellness needs. Our organic agricultural products are grown using
+                        sustainable farming practices, ensuring that our customers receive the purest and most natural
+                        products. Our services also include healthy Ayurvedic medicinal products and treatment centres,
+                        providing natural remedies for a variety of ailments.</p>
                     <p style={{textAlign: 'center', color: 'black'}}>
-                        More than being just a higher educational institute. We advocate the dedication and sincerity
-                        toward hospitality nurturing elites in the industry with comprehensive teaching strategies.</p>
+                        In addition to our health and wellness services, we offer modern IT solutions and marketing
+                        services to help businesses grow and thrive. Our team of experts can provide customized
+                        solutions to meet your specific needs and help you achieve your business goals.</p>
                     <p style={{textAlign: 'center', color: 'black'}}>
-                        More than being just a higher educational institute. We advocate the dedication and sincerity
-                        toward hospitality nurturing elites in the industry with comprehensive teaching strategies.</p>
+                        As a socially responsible organization, we also operate a non-profit organization dedicated to
+                        improving the welfare of children in need. We believe that by taking care of ourselves and the
+                        planet, we can create a better future for all.
+                        Our team comprises passionate individuals with diverse backgrounds and skill sets, including
+                        experts in organic farming, Ayurveda, IT, and marketing. We are dedicated to providing
+                        high-quality services that promote healthy living and sustainable practices.</p>
                 </Grid>
             </Grid>
             {/*end about*/}
@@ -169,41 +176,10 @@ const About = () => {
                                         color: 'black',
                                         paddingLeft: 20,
                                         paddingRight: 20,
-                                        fontSize: 24
-                                    }}>At SH,
-                                        we
-                                        strive to give our students the best experience in
-                                        hospitality studies in the country, including Hospitality, Culinary Arts,
-                                        Tourism
-                                        Studies,
-                                        and
-                                        Event Management.</p>
-                                    <p style={{
-                                        textAlign: 'center',
-                                        color: 'black',
-                                        paddingLeft: 20,
-                                        paddingRight: 20,
-                                        fontSize: 24
-                                    }}>
-                                        More than being just a higher educational institute. We advocate the
-                                        dedication and
-                                        sincerity
-                                        toward hospitality nurturing elites in the industry with comprehensive
-                                        teaching
-                                        strategies.</p>
-                                    <p style={{
-                                        textAlign: 'center',
-                                        color: 'black',
-                                        paddingLeft: 20,
-                                        paddingRight: 20,
-                                        fontSize: 24
-                                    }}>
-                                        More than being just a higher educational institute. We advocate the
-                                        dedication and
-                                        sincerity
-                                        toward hospitality nurturing elites in the industry with comprehensive
-                                        teaching
-                                        strategies.</p>
+                                        fontSize: 24,
+                                        height: 285
+                                    }}>To be a global leader in promoting healthy, sustainable living practices that
+                                        empower individuals and contribute to a healthier planet.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -226,41 +202,13 @@ const About = () => {
                                         color: 'black',
                                         paddingLeft: 20,
                                         paddingRight: 20,
-                                        fontSize: 24
-                                    }}>At SH,
-                                        we
-                                        strive to give our students the best experience in
-                                        hospitality studies in the country, including Hospitality, Culinary Arts,
-                                        Tourism
-                                        Studies,
-                                        and
-                                        Event Management.</p>
-                                    <p style={{
-                                        textAlign: 'center',
-                                        color: 'black',
-                                        paddingLeft: 20,
-                                        paddingRight: 20,
-                                        fontSize: 24
-                                    }}>
-                                        More than being just a higher educational institute. We advocate the
-                                        dedication and
-                                        sincerity
-                                        toward hospitality nurturing elites in the industry with comprehensive
-                                        teaching
-                                        strategies.</p>
-                                    <p style={{
-                                        textAlign: 'center',
-                                        color: 'black',
-                                        paddingLeft: 20,
-                                        paddingRight: 20,
-                                        fontSize: 24
-                                    }}>
-                                        More than being just a higher educational institute. We advocate the
-                                        dedication and
-                                        sincerity
-                                        toward hospitality nurturing elites in the industry with comprehensive
-                                        teaching
-                                        strategies.</p>
+                                        fontSize: 24,
+                                        height: 285
+                                    }}>At Imrooka Global, our mission is to empower individuals to live healthier, more
+                                        sustainable lives by providing high-quality, natural products and services. We
+                                        strive to make a positive impact in the world through our commitment to
+                                        sustainability and social responsibility. Our team is dedicated to providing
+                                        excellent customer service and promoting overall well-being for all.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -340,7 +288,7 @@ const About = () => {
                     >
                         <AnimationOnScroll animateIn="animate__fadeInDown">
                             <Grid item>
-                                <h2 style={{color: Color.theme}}>OUR COMPANIES</h2>
+                                <h2 style={{color: Color.theme}}>OUR ENTITIES</h2>
                             </Grid>
                         </AnimationOnScroll>
                     </Grid>
@@ -392,7 +340,7 @@ const About = () => {
                         <Container style={{
                             marginTop: 20, marginBottom: 20, width: '100%',
                         }}>
-                            <Carousel cols={1} rows={1} gap={10} loop>
+                            <Carousel cols={1} rows={1} gap={10} hideArrow loop>
                                 <Carousel.Item>
                                     <Grid
                                         container
