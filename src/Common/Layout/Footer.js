@@ -64,7 +64,7 @@ const Footer = () => {
                             </i>
                             <i>
                                 {/*<Link href="/investorRelations" underline="none" color="inherit">Investor Relations</Link>*/}
-                                <Link href="/underConstruction" underline="none" color="inherit">Careers</Link>
+                                <Link href="/career" underline="none" color="inherit">Careers</Link>
                             </i>
                             {/*<Link href="/news" underline="none" color="inherit">News</Link>*/}
                             <i>
