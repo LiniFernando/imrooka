@@ -183,8 +183,8 @@ const Sectors = () => {
                                 }}
                                 onClick={() => {
                                     window.scrollTo(0, 0);
-                                    navigate('/UnderConstruction');
-                                    // navigate(`/sectors/${image.title}`)
+                                    // navigate('/UnderConstruction');
+                                    navigate(`/sectors/${image.title}`)
                                 }}
                             >
                                 <ImageSrc style={{backgroundImage: `url(${image.url})`, borderRadius: 25}}/>

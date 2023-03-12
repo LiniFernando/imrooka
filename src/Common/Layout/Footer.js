@@ -84,25 +84,25 @@ const Footer = () => {
                                 fontFamily: 'Roboto'
                             }}>
                             <i>
-                                <Link href="/UnderConstruction" underline="none" color="inherit">Organic
+                                <Link href="/sectors/Organic Agricultural Products" underline="none" color="inherit">Organic
                                     Agricultural Products</Link>
                             </i>
                             <i>
-                                <Link href="/UnderConstruction" underline="none"
+                                <Link href="/sectors/Ayurvedic Medicinal Products & Treatment Centres" underline="none"
                                       color="inherit">Ayurvedic Medicinal Products & Treatment Centres</Link>
                             </i>
                             <i>
-                                <Link href="/UnderConstruction" underline="none" color="inherit">Medical
+                                <Link href="/sectors/Medical Services" underline="none" color="inherit">Medical
                                     Services</Link>
                             </i>
                             <i>
-                                <Link href="/UnderConstruction" underline="none" color="inherit">Cosmetics</Link>
+                                <Link href="/sectors/Cosmetics" underline="none" color="inherit">Cosmetics</Link>
                             </i>
                             <i>
-                                <Link href="/UnderConstruction" underline="none" color="inherit">IT Solutions</Link>
+                                <Link href="/sectors/IT Solutions" underline="none" color="inherit">IT Solutions</Link>
                             </i>
                             <i>
-                                <Link href="/UnderConstruction" underline="none" color="inherit">Marketing
+                                <Link href="/sectors/Marketing Solutions" underline="none" color="inherit">Marketing
                                     Solutions</Link>
                             </i>
                             <i>

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import homeImage from "../img/sectors/slide.png";
 import director from "../img/about/boardMember.jpg";
+import services from "../img/sectors/services.png";
 import {Card, CardActionArea, CardContent, CardMedia, Container, Grid} from "@mui/material";
 import {COLORS as Color} from "../Common/Constant/Color";
 import Ayur from "../img/home/ayur&Beauty.jpg";
@@ -9,6 +10,7 @@ import apparel from "../img/home/apparel.jpg";
 import clinic from "../img/home/clinicSalon.jpg";
 import products from "../img/home/products.jpeg";
 import environment from "../img/home/environment&Farming.jpg";
+import {AnimationOnScroll} from "react-animation-on-scroll";
 import {useParams} from "react-router-dom";
 import {useEffect} from "react";
 import about from "../img/home/welcome tile.png";
@@ -184,7 +186,7 @@ const Sector = () => {
             {/*</AnimationOnScroll>*/}
             {/*end sectors*/}
 
-            {/*<Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
+            <Grid style={{paddingBottom: '20px', marginTop: '50px',}}>
                 <Grid
                     container
                     direction="column"
@@ -199,7 +201,7 @@ const Sector = () => {
                     </Grid>
                     <img style={{width: "75%"}} src={services} alt=""/>
                 </Grid>
-            </Grid>*/}
+            </Grid>
 
             {/*start Brands*/}
             <Grid>
