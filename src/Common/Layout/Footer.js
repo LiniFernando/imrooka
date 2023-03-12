@@ -13,7 +13,7 @@ import {COLORS as Color} from "../Constant/Color";
 
 const Footer = () => {
     return (
-        <footer style={{marginTop: '25px', backgroundColor: Color.theme, boxShadow: '0px 0px 50px #000000'}}>
+        <footer style={{backgroundColor: Color.theme, boxShadow: '0px 0px 50px #000000'}}>
             <Grid style={{maxWidth: '100%'}}>
                 <Grid
                     container
