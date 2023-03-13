@@ -54,21 +54,21 @@ const Footer = () => {
                                 fontFamily: 'Roboto'
                             }}>
                             <i>
-                                <Link href="/" underline="none" color="inherit">Home</Link>
+                                <Link to="/" underline="none" color="inherit">Home</Link>
                             </i>
                             <i>
-                                <Link href="/about" underline="none" color="inherit">About Us</Link>
+                                <Link to="/about" underline="none" color="inherit">About Us</Link>
                             </i>
                             <i>
-                                <Link href="/sectors" underline="none" color="inherit">Sectors</Link>
+                                <Link to="/sectors" underline="none" color="inherit">Sectors</Link>
                             </i>
                             <i>
                                 {/*<Link href="/investorRelations" underline="none" color="inherit">Investor Relations</Link>*/}
-                                <Link href="/career" underline="none" color="inherit">Careers</Link>
+                                <Link to="/career" underline="none" color="inherit">Careers</Link>
                             </i>
                             {/*<Link href="/news" underline="none" color="inherit">News</Link>*/}
                             <i>
-                                <Link href="/contact" underline="none" color="inherit">Contact Us</Link>
+                                <Link to="/contact" underline="none" color="inherit">Contact Us</Link>
                             </i>
                         </Container>
                     </Grid>
@@ -84,29 +84,29 @@ const Footer = () => {
                                 fontFamily: 'Roboto'
                             }}>
                             <i>
-                                <Link href="/sectors/Organic Agricultural Products" underline="none" color="inherit">Organic
+                                <Link to="/sectors/Organic Agricultural Products" underline="none" color="inherit">Organic
                                     Agricultural Products</Link>
                             </i>
                             <i>
-                                <Link href="/sectors/Ayurvedic Medicinal Products & Treatment Centres" underline="none"
+                                <Link to="/sectors/Ayurvedic Medicinal Products & Treatment Centres" underline="none"
                                       color="inherit">Ayurvedic Medicinal Products & Treatment Centres</Link>
                             </i>
                             <i>
-                                <Link href="/sectors/Medical Services" underline="none" color="inherit">Medical
+                                <Link to="/sectors/Medical Services" underline="none" color="inherit">Medical
                                     Services</Link>
                             </i>
                             <i>
-                                <Link href="/sectors/Cosmetics" underline="none" color="inherit">Cosmetics</Link>
+                                <Link to="/sectors/Cosmetics" underline="none" color="inherit">Cosmetics</Link>
                             </i>
                             <i>
-                                <Link href="/sectors/IT Solutions" underline="none" color="inherit">IT Solutions</Link>
+                                <Link to="/sectors/IT Solutions" underline="none" color="inherit">IT Solutions</Link>
                             </i>
                             <i>
-                                <Link href="/sectors/Marketing Solutions" underline="none" color="inherit">Marketing
+                                <Link to="/sectors/Marketing Solutions" underline="none" color="inherit">Marketing
                                     Solutions</Link>
                             </i>
                             <i>
-                                <Link href="/sectors/Beauty & Wellness Centres" underline="none" color="inherit">Beauty
+                                <Link to="/sectors/Beauty & Wellness Centres" underline="none" color="inherit">Beauty
                                     & Wellness Centres</Link>
                             </i>
                             {/*<Link href="/sectors/NGO" underline="none" color="inherit">NGO</Link>*/}

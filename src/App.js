@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Header from "./Common/Layout/Header";
 import Home from "./View";
 import Footer from "./Common/Layout/Footer";
@@ -16,10 +16,11 @@ import UnderConstruction from "./View/underConstruction";
 function App() {
     return (
         <div className="App">
-            <Router>
+            <BrowserRouter>
                 <Header/>
                 <Routes>
-                    <Route path={"/"} element={<Home/>}/>
+                    <Route index element={<Home/>}/>
+                    {/*<Route path={"/"} element={<Home/>}/>*/}
                     <Route path={"/about"} element={<About/>}/>
                     <Route path={"/sectors"} element={<Sectors/>}/>
                     <Route path={"/career"} element={<Career/>}/>
@@ -27,10 +28,11 @@ function App() {
                     <Route path={"/investorRelations"} element={<InvestorRelations/>}/>
                     <Route path={"/news"} element={<News/>}/>
                     <Route path={"/contact"} element={<Contacts/>}/>
+                    <Route path="*" element={<UnderConstruction/>}/>
                     <Route path={"/underConstruction"} element={<UnderConstruction/>}/>
                 </Routes>
                 <Footer/>
-            </Router>
+            </BrowserRouter>
         </div>
     );
 }
