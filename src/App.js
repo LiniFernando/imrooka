@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {Route, Routes, HashRouter} from 'react-router-dom';
 import Header from "./Common/Layout/Header";
 import Home from "./View";
 import Footer from "./Common/Layout/Footer";
@@ -16,7 +16,7 @@ import UnderConstruction from "./View/underConstruction";
 function App() {
     return (
         <div className="App">
-            <Router>
+            <HashRouter>
                 <Header/>
                 <Routes>
                     <Route path={"/"} element={<Home/>}/>
@@ -30,7 +30,7 @@ function App() {
                     <Route path={"/underConstruction"} element={<UnderConstruction/>}/>
                 </Routes>
                 <Footer/>
-            </Router>
+            </HashRouter>
         </div>
     );
 }
