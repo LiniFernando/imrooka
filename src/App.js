@@ -21,15 +21,15 @@ function App() {
                 <Routes>
                     <Route index element={<Home/>}/>
                     {/*<Route path={"/"} element={<Home/>}/>*/}
-                    <Route path={"/about"} element={<About/>}/>
-                    <Route path={"/sectors"} element={<Sectors/>}/>
-                    <Route path={"/career"} element={<Career/>}/>
+                    <Route path="about" element={<About/>}/>
+                    <Route path="sectors" element={<Sectors/>}/>
+                    <Route path="career" element={<Career/>}/>
                     <Route exact path="/sectors/:name" element={<Sector/>}/>
-                    <Route path={"/investorRelations"} element={<InvestorRelations/>}/>
-                    <Route path={"/news"} element={<News/>}/>
-                    <Route path={"/contact"} element={<Contacts/>}/>
+                    <Route path="investorRelations" element={<InvestorRelations/>}/>
+                    <Route path="news" element={<News/>}/>
+                    <Route path="contact" element={<Contacts/>}/>
                     <Route path="*" element={<UnderConstruction/>}/>
-                    <Route path={"/underConstruction"} element={<UnderConstruction/>}/>
+                    <Route path="underConstruction" element={<UnderConstruction/>}/>
                 </Routes>
                 <Footer/>
             </BrowserRouter>
