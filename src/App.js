@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Header from "./Common/Layout/Header";
 import Home from "./View";
 import Footer from "./Common/Layout/Footer";
@@ -16,25 +16,24 @@ import UnderConstruction from "./View/underConstruction";
 function App() {
     return (
         <div className="App">
-            <BrowserRouter>
+            <Router>
                 <Header/>
                 <Routes>
-                    <Route index element={<Home/>}/>
-                    {/*<Route path={"/"} element={<Home/>}/>*/}
-                    <Route path="about" element={<About/>}/>
-                    <Route path="sectors" element={<Sectors/>}/>
-                    <Route path="career" element={<Career/>}/>
+                    <Route path={"/"} element={<Home/>}/>
+                    <Route exact path={"/about"} element={<About/>}/>
+                    <Route path={"/sectors"} element={<Sectors/>}/>
+                    <Route path={"/career"} element={<Career/>}/>
                     <Route exact path="/sectors/:name" element={<Sector/>}/>
-                    <Route path="investorRelations" element={<InvestorRelations/>}/>
-                    <Route path="news" element={<News/>}/>
-                    <Route path="contact" element={<Contacts/>}/>
-                    <Route path="*" element={<UnderConstruction/>}/>
-                    <Route path="underConstruction" element={<UnderConstruction/>}/>
+                    <Route path={"/investorRelations"} element={<InvestorRelations/>}/>
+                    <Route path={"/news"} element={<News/>}/>
+                    <Route exact path={"/contact"} element={<Contacts/>}/>
+                    <Route path={"/underConstruction"} element={<UnderConstruction/>}/>
                 </Routes>
                 <Footer/>
-            </BrowserRouter>
+            </Router>
         </div>
     );
 }
 
 export default App;
+
