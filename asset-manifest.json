@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/imrooka/static/css/main.5bf0f556.css",
-    "main.js": "/imrooka/static/js/main.fada4ea8.js",
+    "main.js": "/imrooka/static/js/main.43177bbe.js",
     "static/js/787.bf42d51d.chunk.js": "/imrooka/static/js/787.bf42d51d.chunk.js",
     "static/media/sectorsSlide.jpg": "/imrooka/static/media/sectorsSlide.c955d038b8b383f2f12a.jpg",
     "static/media/services.png": "/imrooka/static/media/services.4e16328e1befd1ae0c88.png",
@@ -39,11 +39,11 @@
     "static/media/mission.png": "/imrooka/static/media/mission.99c372853430d1a6b7fa.png",
     "index.html": "/imrooka/index.html",
     "main.5bf0f556.css.map": "/imrooka/static/css/main.5bf0f556.css.map",
-    "main.fada4ea8.js.map": "/imrooka/static/js/main.fada4ea8.js.map",
+    "main.43177bbe.js.map": "/imrooka/static/js/main.43177bbe.js.map",
     "787.bf42d51d.chunk.js.map": "/imrooka/static/js/787.bf42d51d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5bf0f556.css",
-    "static/js/main.fada4ea8.js"
+    "static/js/main.43177bbe.js"
   ]
 }
